@@ -43,21 +43,21 @@ const Vector3 Vector3::NEGATIVE_YAXIS(0.0f, -1.0f, 0.0f);
 const Vector3 Vector3::NEGATIVE_ZAXIS(0.0f, 0.0f, -1.0f);
 const Vector3 Vector3::ZERO(0.0f, 0.0f, 0.0f);
 
-Vector3::Vector3( const Vector2& vec2 )
+Vector3::Vector3( const Vector2& vec2 ) noexcept
 : x(vec2.x),
   y(vec2.y),
   z(0.0f)
 {
 }
 
-Vector3::Vector3( const Vector4& vec4 )
+Vector3::Vector3( const Vector4& vec4 ) noexcept
 : x(vec4.x),
   y(vec4.y),
   z(vec4.z)
 {
 }
 
-Vector3& Vector3::operator=(const Vector2& rhs)
+Vector3& Vector3::operator=(const Vector2& rhs) noexcept
 {
   x = rhs.x;
   y = rhs.y;
@@ -66,7 +66,7 @@ Vector3& Vector3::operator=(const Vector2& rhs)
   return *this;
 }
 
-Vector3& Vector3::operator=(const Vector4& rhs)
+Vector3& Vector3::operator=(const Vector4& rhs) noexcept
 {
   x = rhs.x;
   y = rhs.y;
@@ -75,7 +75,7 @@ Vector3& Vector3::operator=(const Vector4& rhs)
   return *this;
 }
 
-Vector3& Vector3::operator*=(const Quaternion& rhs)
+Vector3& Vector3::operator*=(const Quaternion& rhs) noexcept
 {
   // nVidia SDK implementation
   Vector3 qvec(rhs.mVector.x, rhs.mVector.y, rhs.mVector.z);
@@ -97,7 +97,7 @@ Vector3& Vector3::operator*=(const Quaternion& rhs)
   return *this;
 }
 
-bool Vector3::operator==(const Vector3& rhs) const
+bool Vector3::operator==(const Vector3& rhs) const noexcept
 {
   if (fabsf(x - rhs.x) > GetRangedEpsilon(x, rhs.x) )
   {
@@ -115,14 +115,14 @@ bool Vector3::operator==(const Vector3& rhs) const
   return true;
 }
 
-float Vector3::Dot(const Vector3 &other) const
+float Vector3::Dot(const Vector3 &other) const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,3);
 
   return x * other.x + y * other.y + z * other.z;
 }
 
-Vector3 Vector3::Cross(const Vector3 &other) const
+Vector3 Vector3::Cross(const Vector3 &other) const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,6);
 
@@ -131,21 +131,21 @@ Vector3 Vector3::Cross(const Vector3 &other) const
                   (x * other.y) - (y * other.x));
 }
 
-float Vector3::Length() const
+float Vector3::Length() const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,3);
 
   return sqrtf(x*x + y*y + z*z);
 }
 
-float Vector3::LengthSquared() const
+float Vector3::LengthSquared() const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,3);
 
   return x*x + y*y + z*z;
 }
 
-void Vector3::Normalize()
+void Vector3::Normalize() noexcept
 {
   float length = Length();
   if( ! EqualsZero(length) )
@@ -159,19 +159,19 @@ void Vector3::Normalize()
   }
 }
 
-void Vector3::Clamp( const Vector3& min, const Vector3& max )
+void Vector3::Clamp( const Vector3& min, const Vector3& max ) noexcept
 {
   Dali::ClampInPlace<float>( x, min.x, max.x );
   Dali::ClampInPlace<float>( y, min.y, max.y );
   Dali::ClampInPlace<float>( z, min.z, max.z );
 }
 
-std::ostream& operator<< (std::ostream& o, const Vector3& vector)
+std::ostream& operator<< (std::ostream& o, const Vector3& vector) noexcept
 {
   return o << "[" << vector.x << ", " << vector.y << ", " << vector.z << "]";
 }
 
-Vector3 Clamp( const Vector3& v, const float& min, const float& max )
+Vector3 Clamp( const Vector3& v, const float& min, const float& max ) noexcept
 {
   Vector3 result( v );
   result.Clamp( Vector3( min, min, min ) , Vector3( max, max, max ) );

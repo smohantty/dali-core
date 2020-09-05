@@ -53,7 +53,7 @@ struct DALI_CORE_API Vector3
   // (x width r), (y height g), (z depth b) must be consecutive in memory.
   // No other data must be added before (x width r) member.
   // No virtual methods must be added to this struct.
-  Vector3()
+  Vector3() noexcept
   : x(0.0f),
     y(0.0f),
     z(0.0f)
@@ -68,7 +68,7 @@ struct DALI_CORE_API Vector3
    * @param[in] y (or height) component
    * @param[in] z (or depth) component
    */
-  explicit constexpr Vector3(float x, float y, float z)
+  explicit constexpr Vector3(float x, float y, float z) noexcept
   : x(x),
     y(y),
     z(z)
@@ -81,7 +81,7 @@ struct DALI_CORE_API Vector3
    * @SINCE_1_0.0
    * @param[in] array Array of xyz
    */
-  explicit Vector3(const float* array)
+  explicit Vector3(const float* array) noexcept
   : x(array[0]),
     y(array[1]),
     z(array[2])
@@ -94,7 +94,7 @@ struct DALI_CORE_API Vector3
    * @SINCE_1_0.0
    * @param[in] vec2 Vector2 to create this vector from
    */
-  explicit Vector3( const Vector2& vec2 );
+  explicit Vector3( const Vector2& vec2 ) noexcept;
 
   /**
    * @brief Constructor.
@@ -102,7 +102,7 @@ struct DALI_CORE_API Vector3
    * @SINCE_1_0.0
    * @param[in] vec4 Vector4 to create this vector from
    */
-  explicit Vector3( const Vector4& vec4 );
+  explicit Vector3( const Vector4& vec4 ) noexcept;
 
 // Constants
 
@@ -124,7 +124,7 @@ struct DALI_CORE_API Vector3
    * @param[in] array Array of floats
    * @return Itself
    */
-  Vector3& operator=(const float* array)
+  Vector3& operator=(const float* array) noexcept
   {
     x = array[0];
     y = array[1];
@@ -140,7 +140,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs Vector to assign
    * @return Itself
    */
-  Vector3& operator=(const Vector2& rhs);
+  Vector3& operator=(const Vector2& rhs) noexcept;
 
   /**
    * @brief Assignment operator.
@@ -149,7 +149,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs Vector to assign
    * @return Itself
    */
-  Vector3& operator=(const Vector4& rhs);
+  Vector3& operator=(const Vector4& rhs) noexcept;
 
   /**
    * @brief Addition operator.
@@ -158,7 +158,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs Vector to add
    * @return A vector containing the result of the addition
    */
-  Vector3 operator+(const Vector3& rhs) const
+  Vector3 operator+(const Vector3& rhs) const noexcept
   {
     Vector3 temp(*this);
 
@@ -172,7 +172,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs Vector to add
    * @return Itself
    */
-  Vector3& operator+=(const Vector3& rhs)
+  Vector3& operator+=(const Vector3& rhs) noexcept
   {
     x += rhs.x;
     y += rhs.y;
@@ -188,7 +188,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The vector to subtract
    * @return A vector containing the result of the subtraction
    */
-  Vector3 operator-(const Vector3& rhs) const
+  Vector3 operator-(const Vector3& rhs) const noexcept
   {
     Vector3 temp(*this);
 
@@ -202,7 +202,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The vector to subtract
    * @return Itself
    */
-  Vector3& operator-=(const Vector3& rhs)
+  Vector3& operator-=(const Vector3& rhs) noexcept
   {
     x -= rhs.x;
     y -= rhs.y;
@@ -218,7 +218,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The vector to multiply
    * @return A vector containing the result of the multiplication
    */
-  Vector3 operator*(const Vector3& rhs) const
+  Vector3 operator*(const Vector3& rhs) const noexcept
   {
     Vector3 temp(*this);
 
@@ -232,7 +232,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The float value to scale the vector
    * @return A vector containing the result of the scaling
    */
-  Vector3 operator*(float rhs) const
+  Vector3 operator*(float rhs) const noexcept
   {
     return Vector3(x * rhs, y * rhs, z * rhs);
   }
@@ -244,7 +244,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The vector to multiply
    * @return Itself
    */
-  Vector3& operator*=(const Vector3& rhs)
+  Vector3& operator*=(const Vector3& rhs) noexcept
   {
     x *= rhs.x;
     y *= rhs.y;
@@ -260,7 +260,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The float value to scale the vector
    * @return Itself
    */
-  Vector3& operator*=(float rhs)
+  Vector3& operator*=(float rhs) noexcept
   {
     x *= rhs;
     y *= rhs;
@@ -276,7 +276,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The Quaternion value to multiply the vector by
    * @return Itself
    */
-  Vector3& operator*=(const Quaternion& rhs);
+  Vector3& operator*=(const Quaternion& rhs) noexcept;
 
   /**
    * @brief Division operator.
@@ -285,7 +285,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The vector to divide
    * @return A vector containing the result of the division
    */
-  Vector3 operator/(const Vector3& rhs) const
+  Vector3 operator/(const Vector3& rhs) const noexcept
   {
     Vector3 temp(*this);
 
@@ -299,7 +299,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The float value to scale the vector by
    * @return A vector containing the result of the scaling
    */
-  Vector3 operator/(float rhs) const
+  Vector3 operator/(float rhs) const noexcept
   {
     return Vector3(x / rhs, y / rhs, z / rhs);
   }
@@ -311,7 +311,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The vector to divide
    * @return Itself
    */
-  Vector3& operator/=(const Vector3& rhs)
+  Vector3& operator/=(const Vector3& rhs) noexcept
   {
     x /= rhs.x;
     y /= rhs.y;
@@ -327,7 +327,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The float value to scale the vector by
    * @return Itself
    */
-  Vector3& operator/=(float rhs)
+  Vector3& operator/=(float rhs) noexcept
   {
     float oneOverRhs = 1.0f / rhs;
     x *= oneOverRhs;
@@ -343,7 +343,7 @@ struct DALI_CORE_API Vector3
    * @SINCE_1_0.0
    * @return A vector containing the negation
    */
-  Vector3 operator-() const
+  Vector3 operator-() const noexcept
   {
     Vector3 temp(-x, -y, -z);
 
@@ -359,7 +359,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The vector to test against
    * @return True if the vectors are equal
    */
-  bool operator==(const Vector3& rhs) const;
+  bool operator==(const Vector3& rhs) const noexcept;
 
   /**
    * @brief Inequality operator.
@@ -370,7 +370,7 @@ struct DALI_CORE_API Vector3
    * @param[in] rhs The vector to test against
    * @return True if the vectors are not equal
    */
-  bool operator!=(const Vector3& rhs) const
+  bool operator!=(const Vector3& rhs) const noexcept
   {
     return !(*this == rhs);
   }
@@ -415,7 +415,7 @@ struct DALI_CORE_API Vector3
    * @param[in] other The other vector
    * @return The dot product
    */
-  float Dot(const Vector3& other) const;
+  float Dot(const Vector3& other) const noexcept;
 
   /**
    * @brief Returns the cross produce of this vector and another vector.
@@ -427,7 +427,7 @@ struct DALI_CORE_API Vector3
    * @param[in] other The other vector
    * @return The cross product
    */
-  Vector3 Cross(const Vector3& other) const;
+  Vector3 Cross(const Vector3& other) const noexcept;
 
   /**
    * @brief Returns the length of the vector.
@@ -435,7 +435,7 @@ struct DALI_CORE_API Vector3
    * @SINCE_1_0.0
    * @return The length of the vector
    */
-  float Length() const;
+  float Length() const noexcept;
 
   /**
    * @brief Returns the length of the vector squared.
@@ -445,14 +445,14 @@ struct DALI_CORE_API Vector3
    * @SINCE_1_0.0
    * @return The length of the vector squared
    */
-  float LengthSquared() const;
+  float LengthSquared() const noexcept;
 
   /**
    * @brief Sets the vector to be unit length, whilst maintaining its direction.
    *
    * @SINCE_1_0.0
    */
-  void Normalize();
+  void Normalize() noexcept;
 
   /**
    * @brief Clamps the vector between minimum and maximum vectors.
@@ -461,7 +461,7 @@ struct DALI_CORE_API Vector3
    * @param[in] min The minimum vector
    * @param[in] max The maximum vector
    */
-  void Clamp( const Vector3& min, const Vector3& max );
+  void Clamp( const Vector3& min, const Vector3& max ) noexcept;
 
   /**
    * @brief Returns the contents of the vector as an array of 3 floats.
@@ -474,7 +474,7 @@ struct DALI_CORE_API Vector3
    * @return The vector contents as an array of 3 floats
    * @note inlined for performance reasons (generates less code than a function call)
    */
-  const float* AsFloat() const {return &x;}
+  const float* AsFloat() const noexcept {return &x;}
 
   /**
    * @brief Returns the contents of the vector as an array of 3 floats.
@@ -487,7 +487,7 @@ struct DALI_CORE_API Vector3
    * @return The vector contents as an array of 3 floats
    * @note inlined for performance reasons (generates less code than a function call)
    */
-  float* AsFloat() {return &x;}
+  float* AsFloat() noexcept {return &x;}
 
   /**
    * @brief Returns the x & y components (or width & height, or r & g) as a Vector2.
@@ -496,7 +496,7 @@ struct DALI_CORE_API Vector3
    * @return The partial vector contents as Vector2 (x,y)
    * @note inlined for performance reasons (generates less code than a function call)
    */
-  const Vector2& GetVectorXY() const {return reinterpret_cast<const Vector2&>(x);}
+  const Vector2& GetVectorXY() const noexcept {return reinterpret_cast<const Vector2&>(x);}
 
   /**
    * @brief Returns the x & y components (or width & height, or r & g) as a Vector2.
@@ -505,7 +505,7 @@ struct DALI_CORE_API Vector3
    * @return The partial vector contents as Vector2 (x,y)
    * @note inlined for performance reasons (generates less code than a function call)
    */
-  Vector2& GetVectorXY() {return reinterpret_cast<Vector2&>(x);}
+  Vector2& GetVectorXY() noexcept {return reinterpret_cast<Vector2&>(x);}
 
   /**
    * @brief Returns the y & z components (or height & depth, or g & b) as a Vector2.
@@ -514,7 +514,7 @@ struct DALI_CORE_API Vector3
    * @return The partial vector contents as Vector2 (y,z)
    * @note inlined for performance reasons (generates less code than a function call)
    */
-  const Vector2& GetVectorYZ() const {return reinterpret_cast<const Vector2&>(y);}
+  const Vector2& GetVectorYZ() const noexcept {return reinterpret_cast<const Vector2&>(y);}
 
   /**
    * @brief Returns the y & z components (or height & depth, or g & b) as a Vector2.
@@ -523,7 +523,7 @@ struct DALI_CORE_API Vector3
    * @return The partial vector contents as Vector2 (y,z)
    * @note inlined for performance reasons (generates less code than a function call)
    */
-  Vector2& GetVectorYZ() {return reinterpret_cast<Vector2&>(y);}
+  Vector2& GetVectorYZ() noexcept {return reinterpret_cast<Vector2&>(y);}
 
 // Data
 
@@ -552,10 +552,10 @@ struct DALI_CORE_API Vector3
 
 public:
 
-  Vector3( const Vector3& ) = default; ///< Default copy constructor
-  Vector3( Vector3&& ) = default; ///< Default move constructor
-  Vector3& operator=( const Vector3& ) = default; ///< Default copy assignment operator
-  Vector3& operator=( Vector3&& ) = default; ///< Default move assignment operator
+  Vector3( const Vector3& ) noexcept = default; ///< Default copy constructor
+  Vector3( Vector3&& ) noexcept = default; ///< Default move constructor
+  Vector3& operator=( const Vector3& ) noexcept = default; ///< Default copy assignment operator
+  Vector3& operator=( Vector3&& ) noexcept = default; ///< Default move assignment operator
 };
 
 /**
@@ -566,7 +566,7 @@ public:
  * @param[in] vector The vector to print
  * @return The output stream operator
  */
-DALI_CORE_API std::ostream& operator<< (std::ostream& o, const Vector3& vector);
+DALI_CORE_API std::ostream& operator<< (std::ostream& o, const Vector3& vector) noexcept;
 
 /**
  * @brief Returns a vector with components set to the minimum of the corresponding component in a and b.
@@ -577,7 +577,7 @@ DALI_CORE_API std::ostream& operator<< (std::ostream& o, const Vector3& vector);
  * @param[in] b A vector
  * @return A vector containing the minimum of each component from a and b
  */
-inline Vector3 Min( const Vector3& a, const Vector3& b )
+inline Vector3 Min( const Vector3& a, const Vector3& b ) noexcept
 {
   return Vector3( a.x < b.x ? a.x : b.x ,
                   a.y < b.y ? a.y : b.y,
@@ -593,7 +593,7 @@ inline Vector3 Min( const Vector3& a, const Vector3& b )
  * @param[in] b A vector
  * @return A vector containing the maximum of each component from a and b
  */
-inline Vector3 Max( const Vector3& a, const Vector3& b )
+inline Vector3 Max( const Vector3& a, const Vector3& b ) noexcept
 {
   return Vector3( a.x > b.x ? a.x : b.x,
                   a.y > b.y ? a.y : b.y,
@@ -609,7 +609,7 @@ inline Vector3 Max( const Vector3& a, const Vector3& b )
  * @param[in] max The maximum value
  * @return A vector containing the clamped components of v
  */
-DALI_CORE_API Vector3 Clamp( const Vector3& v, const float& min, const float& max );
+DALI_CORE_API Vector3 Clamp( const Vector3& v, const float& min, const float& max ) noexcept;
 
 // Allow Vector3 to be treated as a POD type
 template <> struct TypeTraits< Vector3 > : public BasicTypes< Vector3 > { enum { IS_TRIVIAL_TYPE = true }; };

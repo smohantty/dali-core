@@ -40,7 +40,7 @@ const Vector4 Vector4::YAXIS(0.0f, 1.0f, 0.0f, 0.0f);
 const Vector4 Vector4::ZAXIS(0.0f, 0.0f, 1.0f, 0.0f);
 const Vector4 Vector4::ZERO(0.0f, 0.0f, 0.0f, 0.0f);
 
-Vector4::Vector4( const Vector2& vec2 )
+Vector4::Vector4( const Vector2& vec2 ) noexcept
 : x(vec2.x),
   y(vec2.y),
   z(0.0f),
@@ -48,7 +48,7 @@ Vector4::Vector4( const Vector2& vec2 )
 {
 }
 
-Vector4::Vector4( const Vector3& vec3 )
+Vector4::Vector4( const Vector3& vec3 ) noexcept
 : x(vec3.x),
   y(vec3.y),
   z(vec3.z),
@@ -56,7 +56,7 @@ Vector4::Vector4( const Vector3& vec3 )
 {
 }
 
-Vector4& Vector4::operator=(const Vector2& vec2 )
+Vector4& Vector4::operator=(const Vector2& vec2 ) noexcept
 {
   x = vec2.x;
   y = vec2.y;
@@ -65,7 +65,7 @@ Vector4& Vector4::operator=(const Vector2& vec2 )
   return *this;
 }
 
-Vector4& Vector4::operator=(const Vector3& vec3 )
+Vector4& Vector4::operator=(const Vector3& vec3 ) noexcept
 {
   x = vec3.x;
   y = vec3.y;
@@ -75,7 +75,7 @@ Vector4& Vector4::operator=(const Vector3& vec3 )
 }
 
 
-bool Vector4::operator==(const Vector4& rhs) const
+bool Vector4::operator==(const Vector4& rhs) const noexcept
 {
   if (fabsf(x - rhs.x) > GetRangedEpsilon(x, rhs.x) )
   {
@@ -97,28 +97,28 @@ bool Vector4::operator==(const Vector4& rhs) const
   return true;
 }
 
-float Vector4::Dot(const Vector3 &other) const
+float Vector4::Dot(const Vector3 &other) const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,3);
 
   return x * other.x + y * other.y + z * other.z;
 }
 
-float Vector4::Dot(const Vector4 &other) const
+float Vector4::Dot(const Vector4 &other) const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,3);
 
   return x * other.x + y * other.y + z * other.z;
 }
 
-float Vector4::Dot4(const Vector4 &other) const
+float Vector4::Dot4(const Vector4 &other) const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,4);
 
   return x * other.x + y * other.y + z * other.z + w * other.w;
 }
 
-Vector4 Vector4::Cross(const Vector4 &other) const
+Vector4 Vector4::Cross(const Vector4 &other) const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,6);
 
@@ -129,21 +129,21 @@ Vector4 Vector4::Cross(const Vector4 &other) const
 }
 
 // Will always return positive square root
-float Vector4::Length() const
+float Vector4::Length() const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,3);
 
   return sqrtf(x*x + y*y + z*z);
 }
 
-float Vector4::LengthSquared() const
+float Vector4::LengthSquared() const noexcept
 {
   MATH_INCREASE_BY(PerformanceMonitor::FLOAT_POINT_MULTIPLY,3);
 
   return x*x + y*y + z*z;
 }
 
-void Vector4::Normalize()
+void Vector4::Normalize() noexcept
 {
   const float length = Length();
 
@@ -159,7 +159,7 @@ void Vector4::Normalize()
   }
 }
 
-void Vector4::Clamp( const Vector4& min, const Vector4& max )
+void Vector4::Clamp( const Vector4& min, const Vector4& max ) noexcept
 {
   Dali::ClampInPlace<float>( x, min.x, max.x );
   Dali::ClampInPlace<float>( y, min.y, max.y );
@@ -167,12 +167,12 @@ void Vector4::Clamp( const Vector4& min, const Vector4& max )
   Dali::ClampInPlace<float>( w, min.w, max.w );
 }
 
-std::ostream& operator<< (std::ostream& o, const Vector4& vector)
+std::ostream& operator<< (std::ostream& o, const Vector4& vector) noexcept
 {
   return o << "[" << vector.x << ", " << vector.y << ", " << vector.z << ", " << vector.w << "]";
 }
 
-Vector4 Clamp( const Vector4& v, const float& min, const float& max )
+Vector4 Clamp( const Vector4& v, const float& min, const float& max ) noexcept
 {
   Vector4 result( v );
   result.Clamp( Vector4( min, min, min, min ), Vector4( max, max, max, max) );

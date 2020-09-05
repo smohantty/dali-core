@@ -55,7 +55,7 @@ public:
    * @brief Constructor.
    * @SINCE_1_0.0
    */
-  Vector2()
+  Vector2() noexcept
   : x(0.0f),
     y(0.0f)
   {
@@ -68,7 +68,7 @@ public:
    * @param[in] x x or width component
    * @param[in] y y or height component
    */
-  explicit constexpr Vector2(float x, float y)
+  explicit constexpr Vector2(float x, float y) noexcept
   : x(x), y(y)
   {
   }
@@ -79,7 +79,7 @@ public:
    * @SINCE_1_0.0
    * @param[in] array Array of xy
    */
-  explicit Vector2(const float* array)
+  explicit Vector2(const float* array) noexcept
   : x(array[0]),
     y(array[1])
   {
@@ -91,7 +91,7 @@ public:
    * @SINCE_1_0.0
    * @param[in] vec3 Vector3 to create this vector from
    */
-  explicit Vector2(const Vector3& vec3);
+  explicit Vector2(const Vector3& vec3) noexcept;
 
   /**
    * @brief Constructor.
@@ -99,7 +99,7 @@ public:
    * @SINCE_1_0.0
    * @param[in] vec4 Vector4 to create this vector from
    */
-  explicit Vector2(const Vector4& vec4);
+  explicit Vector2(const Vector4& vec4) noexcept;
 
   /**
    * @brief Conversion constructor from a Uint16Pair.
@@ -108,7 +108,7 @@ public:
    *
    * @param[in] pair The Uint16Pair to create this vector from
    */
-  Vector2(const Uint16Pair& pair);
+  Vector2(const Uint16Pair& pair) noexcept;
 
 // Constants
 
@@ -128,7 +128,7 @@ public:
    * @param[in] array Array of floats
    * @return Itself
    */
-  Vector2& operator=(const float* array)
+  Vector2& operator=(const float* array) noexcept
   {
     x = array[0];
     y = array[1];
@@ -143,7 +143,7 @@ public:
    * @param[in] rhs Vector to assign
    * @return Itself
    */
-  Vector2& operator=(const Vector3& rhs);
+  Vector2& operator=(const Vector3& rhs) noexcept;
 
   /**
    * @brief Assignment operator.
@@ -152,7 +152,7 @@ public:
    * @param[in] rhs Vector to assign
    * @return Itself
    */
-  Vector2& operator=(const Vector4& rhs);
+  Vector2& operator=(const Vector4& rhs) noexcept;
 
   /**
    * @brief Addition operator.
@@ -161,7 +161,7 @@ public:
    * @param[in] rhs Vector to add
    * @return A vector containing the result of the addition
    */
-  Vector2 operator+(const Vector2& rhs) const
+  Vector2 operator+(const Vector2& rhs) const noexcept
   {
     Vector2 temp(*this);
 
@@ -175,7 +175,7 @@ public:
    * @param[in] rhs Vector to add
    * @return Itself
    */
-  Vector2& operator+=(const Vector2& rhs)
+  Vector2& operator+=(const Vector2& rhs) noexcept
   {
     x += rhs.x;
     y += rhs.y;
@@ -190,7 +190,7 @@ public:
    * @param[in] rhs The vector to subtract
    * @return A vector containing the result of the subtraction
    */
-  Vector2 operator-(const Vector2& rhs) const
+  Vector2 operator-(const Vector2& rhs) const noexcept
   {
     Vector2 temp(*this);
 
@@ -204,7 +204,7 @@ public:
    * @param[in] rhs The vector to subtract
    * @return Itself
    */
-  Vector2& operator-=(const Vector2& rhs)
+  Vector2& operator-=(const Vector2& rhs) noexcept
   {
     x -= rhs.x;
     y -= rhs.y;
@@ -219,7 +219,7 @@ public:
    * @param[in] rhs The vector to multiply
    * @return A vector containing the result of the multiplication
    */
-  Vector2 operator*(const Vector2& rhs) const
+  Vector2 operator*(const Vector2& rhs) const noexcept
   {
     return Vector2(x * rhs.x, y * rhs.y);
   }
@@ -231,7 +231,7 @@ public:
    * @param[in] rhs The float value to scale the vector
    * @return A vector containing the result of the scaling
    */
-  Vector2 operator*(float rhs) const
+  Vector2 operator*(float rhs) const noexcept
   {
     return Vector2(x * rhs, y * rhs);
   }
@@ -243,7 +243,7 @@ public:
    * @param[in] rhs The vector to multiply
    * @return Itself
    */
-  Vector2& operator*=(const Vector2& rhs)
+  Vector2& operator*=(const Vector2& rhs) noexcept
   {
     x *= rhs.x;
     y *= rhs.y;
@@ -258,7 +258,7 @@ public:
    * @param[in] rhs The float value to scale the vector
    * @return Itself
    */
-  Vector2& operator*=(float rhs)
+  Vector2& operator*=(float rhs) noexcept
   {
     x *= rhs;
     y *= rhs;
@@ -273,7 +273,7 @@ public:
    * @param[in] rhs The vector to divide
    * @return A vector containing the result of the division
    */
-  Vector2 operator/(const Vector2& rhs) const
+  Vector2 operator/(const Vector2& rhs) const noexcept
   {
     return Vector2(x / rhs.x, y / rhs.y);
   }
@@ -285,7 +285,7 @@ public:
    * @param[in] rhs The float value to scale the vector by
    * @return A vector containing the result of the scaling
    */
-  Vector2 operator/(float rhs) const
+  Vector2 operator/(float rhs) const noexcept
   {
     return Vector2(x / rhs, y / rhs);
   }
@@ -298,7 +298,7 @@ public:
    * @param[in] rhs The vector to divide
    * @return Itself
    */
-  Vector2& operator/=(const Vector2& rhs)
+  Vector2& operator/=(const Vector2& rhs) noexcept
   {
     x /= rhs.x;
     y /= rhs.y;
@@ -313,7 +313,7 @@ public:
    * @param[in] rhs The float value to scale the vector by
    * @return Itself
    */
-  Vector2& operator/=(float rhs)
+  Vector2& operator/=(float rhs) noexcept
   {
     x /= rhs;
     y /= rhs;
@@ -327,7 +327,7 @@ public:
    * @SINCE_1_0.0
    * @return A vector containing the negation
    */
-  Vector2 operator-() const
+  Vector2 operator-() const noexcept
   {
     Vector2 temp(-x, -y);
 
@@ -343,7 +343,7 @@ public:
    * @param[in] rhs The vector to test against
    * @return true if the vectors are equal
    */
-  bool operator==(const Vector2& rhs) const;
+  bool operator==(const Vector2& rhs) const noexcept;
 
   /**
    * @brief Inequality operator.
@@ -354,7 +354,7 @@ public:
    * @param[in] rhs The vector to test against
    * @return true if the vectors are not equal
    */
-  bool operator!=(const Vector2& rhs) const
+  bool operator!=(const Vector2& rhs) const noexcept
   {
     return !(*this == rhs);
   }
@@ -367,7 +367,7 @@ public:
    * @param[in] index Subscript index
    * @return The float at the given index
    */
-  const float& operator[](const uint32_t index) const
+  const float& operator[](const uint32_t index) const noexcept
   {
     DALI_ASSERT_ALWAYS( index < 2 && "Vector element index out of bounds" );
 
@@ -382,7 +382,7 @@ public:
    * @param[in] index Subscript index
    * @return The float at the given index
    */
-  float& operator[](const uint32_t index)
+  float& operator[](const uint32_t index) noexcept
   {
     DALI_ASSERT_ALWAYS( index < 2 && "Vector element index out of bounds" );
 
@@ -395,7 +395,7 @@ public:
    * @SINCE_1_0.0
    * @return The length of the vector
    */
-  float Length() const;
+  float Length() const noexcept;
 
   /**
    * @brief Returns the length of the vector squared.
@@ -405,14 +405,14 @@ public:
    * @SINCE_1_0.0
    * @return The length of the vector squared
    */
-  float LengthSquared() const;
+  float LengthSquared() const noexcept;
 
   /**
    * @brief Sets the vector to be unit length, whilst maintaining its direction.
    *
    * @SINCE_1_0.0
    */
-  void Normalize();
+  void Normalize() noexcept;
 
   /**
     * @brief Clamps the vector between minimum and maximum vectors.
@@ -421,7 +421,7 @@ public:
     * @param[in] min The minimum vector
     * @param[in] max The maximum vector
    */
-  void Clamp( const Vector2& min, const Vector2& max );
+  void Clamp( const Vector2& min, const Vector2& max ) noexcept;
 
   /**
    * @brief Returns the contents of the vector as an array of 2 floats.
@@ -433,7 +433,7 @@ public:
    * @return The vector contents as an array of 2 floats
    * @note inlined for performance reasons (generates less code than a function call)
    */
-  const float* AsFloat() const {return &x;}
+  const float* AsFloat() const noexcept {return &x;}
 
   /**
    * @brief Returns the contents of the vector as an array of 2 floats.
@@ -445,14 +445,14 @@ public:
    * @return The vector contents as an array of 2 floats
    * @note inlined for performance reasons (generates less code than a function call)
    */
-  float* AsFloat() {return &x;}
+  float* AsFloat() noexcept {return &x;}
 
 public:
 
-  Vector2( const Vector2& ) = default; ///< Default copy constructor
-  Vector2( Vector2&& ) = default; ///< Default move constructor
-  Vector2& operator=( const Vector2& ) = default; ///< Default copy assignment operator
-  Vector2& operator=( Vector2&& ) = default; ///< Default move assignment operator
+  Vector2( const Vector2& ) noexcept = default; ///< Default copy constructor
+  Vector2( Vector2&& ) noexcept = default; ///< Default move constructor
+  Vector2& operator=( const Vector2& ) noexcept = default; ///< Default copy assignment operator
+  Vector2& operator=( Vector2&& ) noexcept = default; ///< Default move assignment operator
 
 public: // Data
 
@@ -488,7 +488,7 @@ typedef Vector2 Size;
  * @param[in] vector The vector to print
  * @return The output stream operator
  */
-DALI_CORE_API std::ostream& operator<< (std::ostream& o, const Vector2& vector);
+DALI_CORE_API std::ostream& operator<< (std::ostream& o, const Vector2& vector) noexcept;
 
 /**
  * @brief Returns a vector with components set to the minimum of the corresponding component in a and b.
@@ -499,7 +499,7 @@ DALI_CORE_API std::ostream& operator<< (std::ostream& o, const Vector2& vector);
  * @param[in] b A vector
  * @return A vector containing the minimum of each component from a and b
  */
-inline Vector2 Min( const Vector2& a, const Vector2& b )
+inline Vector2 Min( const Vector2& a, const Vector2& b ) noexcept
 {
   return Vector2( a.x < b.x ? a.x : b.x , a.y < b.y ? a.y : b.y );
 }
@@ -513,7 +513,7 @@ inline Vector2 Min( const Vector2& a, const Vector2& b )
  * @param[in] b A vector
  * @return A vector containing the maximum of each component from a and b
  */
-inline Vector2 Max( const Vector2& a, const Vector2& b )
+inline Vector2 Max( const Vector2& a, const Vector2& b ) noexcept
 {
   return Vector2( a.x > b.x ? a.x : b.x , a.y > b.y ? a.y : b.y );
 }
@@ -527,7 +527,7 @@ inline Vector2 Max( const Vector2& a, const Vector2& b )
  * @param[in] max The maximum value
  * @return A vector containing the clamped components of v
  */
-DALI_CORE_API Vector2 Clamp( const Vector2& v, const float& min, const float& max );
+DALI_CORE_API Vector2 Clamp( const Vector2& v, const float& min, const float& max ) noexcept;
 
 // Allow Vector2 to be treated as a POD type
 template <> struct TypeTraits< Vector2 > : public BasicTypes< Vector2 > { enum { IS_TRIVIAL_TYPE = true }; };

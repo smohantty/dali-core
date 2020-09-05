@@ -45,7 +45,7 @@ struct Rect
    * @brief Constructor.
    * @SINCE_1_0.0
    */
-  Rect()
+  Rect() noexcept
   : x(0),
     y(0),
     width(0),
@@ -62,7 +62,7 @@ struct Rect
    * @param[in] width  Width (or bottom)
    * @param[in] height Height (or top)
    */
-  Rect(T x, T y, T width, T height)
+  Rect(T x, T y, T width, T height) noexcept
   : x(x),
     y(y),
     width(width),
@@ -76,7 +76,7 @@ struct Rect
    * @SINCE_1_9.14
    * @param[in] vec4 Vector4 to convert from
    */
-  Rect( const Vector4& vec4 )
+  Rect( const Vector4& vec4 ) noexcept
   : x(vec4.x),
     y(vec4.y),
     width(vec4.z),
@@ -90,7 +90,7 @@ struct Rect
    * @SINCE_1_9.27
    * @param[in] rhs The original object
    */
-  Rect( const Rect<T>& rhs ) = default;
+  Rect( const Rect<T>& rhs ) noexcept = default;
 
   /**
    * @brief Default copy assignment operator.
@@ -99,7 +99,7 @@ struct Rect
    * @param[in] rhs The original object
    * @return Reference to this
    */
-  Rect<T>& operator=( const Rect<T>& rhs ) = default;
+  Rect<T>& operator=( const Rect<T>& rhs ) noexcept = default;
 
   /**
    * @brief Default move constructor.
@@ -107,7 +107,7 @@ struct Rect
    * @SINCE_1_9.27
    * @param[in] rhs The original object
    */
-  Rect<T>( Rect<T>&& rhs ) = default;
+  Rect<T>( Rect<T>&& rhs ) noexcept = default;
 
   /**
    * @brief Default move assignment operator.
@@ -116,7 +116,7 @@ struct Rect
    * @param[in] rhs The original object
    * @return Reference to this
    */
-  Rect<T>& operator=( Rect<T>&& rhs ) = default;
+  Rect<T>& operator=( Rect<T>&& rhs ) noexcept = default;
 
   /**
    * @brief Assignment operator.
@@ -125,7 +125,7 @@ struct Rect
    * @param[in] vec4 The Vector4 to assign
    * @return Reference to this
    */
-  Rect<T>& operator=(const Vector4& vec4)
+  Rect<T>& operator=(const Vector4& vec4) noexcept
   {
     x = vec4.x;
     y = vec4.y;
@@ -144,7 +144,7 @@ struct Rect
    * @param[in] newWidth  Width
    * @param[in] newHeight Height
    */
-  void Set(T newX, T newY, T newWidth, T newHeight)
+  void Set(T newX, T newY, T newWidth, T newHeight) noexcept
   {
     x = newX;
     y = newY;
@@ -158,7 +158,7 @@ struct Rect
    * @SINCE_1_0.0
    * @return True if width or height are zero
    */
-  bool IsEmpty() const
+  bool IsEmpty() const noexcept
   {
     return width  == 0 ||
       height == 0;
@@ -170,7 +170,7 @@ struct Rect
    * @SINCE_1_9.18
    * @return True if width and height are not negative
    */
-  bool IsValid() const
+  bool IsValid() const noexcept
   {
     return !(width < 0 || height < 0);
   }
@@ -181,7 +181,7 @@ struct Rect
    * @SINCE_1_0.0
    * @return The left edge of the rectangle
    */
-  T Left() const
+  T Left() const noexcept
   {
     return x;
   }
@@ -191,7 +191,7 @@ struct Rect
    * @SINCE_1_0.0
    * @return The right edge of the rectangle
    */
-  T Right() const
+  T Right() const noexcept
   {
     return x + width;
   }
@@ -202,7 +202,7 @@ struct Rect
    * @SINCE_1_0.0
    * @return The top of the rectangle
    */
-  T Top() const
+  T Top() const noexcept
   {
     return y;
   }
@@ -213,7 +213,7 @@ struct Rect
    * @SINCE_1_0.0
    * @return The bottom of the rectangle
    */
-  T Bottom() const
+  T Bottom() const noexcept
   {
     return y + height;
   }
@@ -224,7 +224,7 @@ struct Rect
    * @SINCE_1_0.0
    * @return The area of the rectangle
    */
-  T Area() const
+  T Area() const noexcept
   {
     return width * height;
   }
@@ -236,7 +236,7 @@ struct Rect
    * @param[in] other The other rectangle to test against this rectangle
    * @return True if the rectangles intersect
    */
-  bool Intersects(const Rect<T>& other) const
+  bool Intersects(const Rect<T>& other) const noexcept
   {
     return (other.x + other.width) > x && other.x < (x + width) &&
       (other.y + other.height) > y && other.y < (y + height);
@@ -250,7 +250,7 @@ struct Rect
    * @param[in] rect The other rectangle to intersect with
    * @return True if the rectangles intersect
    */
-  bool Intersect(const Rect<T>& rect)
+  bool Intersect(const Rect<T>& rect) noexcept
   {
     const int left = std::max(rect.x, x);
     const int top = std::max(rect.y, y);
@@ -278,7 +278,7 @@ struct Rect
    * @SINCE_1_9.18
    * @param[in] rect The other rectangle to merge with
    */
-  void Merge(const Rect<T>& rect)
+  void Merge(const Rect<T>& rect) noexcept
   {
     const int left = std::min(rect.x, x);
     const int top = std::min(rect.y, y);
@@ -296,7 +296,7 @@ struct Rect
    * The result of the inset is stored in this rectangle.
    * @SINCE_1_9.18
    */
-  void Inset(T dx, T dy)
+  void Inset(T dx, T dy) noexcept
   {
     const int left = x - dx;
     const int top = y - dy;
@@ -315,7 +315,7 @@ struct Rect
    * @param[in] other The other rectangle to test against this rectangle
    * @return True if the specified rectangle is contained
    */
-  bool Contains(const Rect<T>& other) const
+  bool Contains(const Rect<T>& other) const noexcept
   {
     return other.x >= x && (other.x + other.width)  <= (x + width) &&
       other.y >= y && (other.y + other.height) <= (y + height);
@@ -357,7 +357,7 @@ public:   // Data
  * @return True if boxes are exactly same
  */
 template< typename T >
-inline bool operator==( const Rect<T>& lhs, const Rect<T>& rhs )
+inline bool operator==( const Rect<T>& lhs, const Rect<T>& rhs ) noexcept
 {
   return ( lhs.x == rhs.x )&&
     ( lhs.y == rhs.y )&&
@@ -374,7 +374,7 @@ inline bool operator==( const Rect<T>& lhs, const Rect<T>& rhs )
  * @return True if rectangles are not identical
  */
 template< typename T >
-inline bool operator!=( const Rect<T>& lhs, const Rect<T>& rhs )
+inline bool operator!=( const Rect<T>& lhs, const Rect<T>& rhs ) noexcept
 {
   return !(lhs == rhs);
 }
@@ -388,7 +388,7 @@ inline bool operator!=( const Rect<T>& lhs, const Rect<T>& rhs )
  * @return True if rectangles are exactly same
  */
 template<>
-inline bool operator==( const Rect<float>& lhs, const Rect<float>& rhs )
+inline bool operator==( const Rect<float>& lhs, const Rect<float>& rhs ) noexcept
 {
   return ( fabsf( lhs.x - rhs.x ) < GetRangedEpsilon(lhs.x, rhs.x) )&&
     ( fabsf( lhs.y - rhs.y ) < GetRangedEpsilon(lhs.y, rhs.y) )&&
@@ -403,7 +403,7 @@ inline bool operator==( const Rect<float>& lhs, const Rect<float>& rhs )
  * @return True if the rectangle has zero size
  */
 template<>
-inline bool Rect<float>::IsEmpty() const
+inline bool Rect<float>::IsEmpty() const noexcept
 {
   return (fabsf(width)  <= GetRangedEpsilon(width, width)
           ||
@@ -419,7 +419,7 @@ inline bool Rect<float>::IsEmpty() const
  * @return The output stream operator
  */
 template< typename T >
-inline std::ostream& operator<< (std::ostream& stream, const Rect<T>& rectangle)
+inline std::ostream& operator<< (std::ostream& stream, const Rect<T>& rectangle) noexcept
 {
   return stream << "[" << rectangle.x << ", " << rectangle.y << ", " << rectangle.width << ", " << rectangle.height << "]";
 }

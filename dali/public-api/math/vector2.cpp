@@ -39,25 +39,25 @@ const Vector2 Vector2::NEGATIVE_XAXIS(-1.0f, 0.0f);
 const Vector2 Vector2::NEGATIVE_YAXIS(0.0f, -1.0f);
 const Vector2 Vector2::ZERO(0.0f, 0.0f);
 
-Vector2::Vector2(const Vector3& vec3)
+Vector2::Vector2(const Vector3& vec3) noexcept
 : x(vec3.x),
   y(vec3.y)
 {
 }
 
-Vector2::Vector2(const Vector4& vec4)
+Vector2::Vector2(const Vector4& vec4) noexcept
 : x(vec4.x),
   y(vec4.y)
 {
 }
 
-Vector2::Vector2(const Uint16Pair& pair)
+Vector2::Vector2(const Uint16Pair& pair) noexcept
 : width(pair.GetWidth()),
   height(pair.GetHeight())
 {
 }
 
-Vector2& Vector2::operator=(const Vector3& rhs)
+Vector2& Vector2::operator=(const Vector3& rhs) noexcept
 {
   x = rhs.x;
   y = rhs.y;
@@ -65,7 +65,7 @@ Vector2& Vector2::operator=(const Vector3& rhs)
   return *this;
 }
 
-Vector2& Vector2::operator=(const Vector4& rhs)
+Vector2& Vector2::operator=(const Vector4& rhs) noexcept
 {
   x = rhs.x;
   y = rhs.y;
@@ -74,7 +74,7 @@ Vector2& Vector2::operator=(const Vector4& rhs)
 }
 
 
-bool Vector2::operator==(const Vector2& rhs) const
+bool Vector2::operator==(const Vector2& rhs) const noexcept
 {
   if (fabsf(x - rhs.x) > GetRangedEpsilon(x, rhs.x))
   {
@@ -88,17 +88,17 @@ bool Vector2::operator==(const Vector2& rhs) const
   return true;
 }
 
-float Vector2::Length() const
+float Vector2::Length() const noexcept
 {
   return sqrtf(LengthSquared());
 }
 
-float Vector2::LengthSquared() const
+float Vector2::LengthSquared() const noexcept
 {
   return (x*x) + (y*y);
 }
 
-void Vector2::Normalize()
+void Vector2::Normalize() noexcept
 {
   float length = Length();
   if( ! EqualsZero(length) )
@@ -111,18 +111,18 @@ void Vector2::Normalize()
   }
 }
 
-void Vector2::Clamp( const Vector2& min, const Vector2& max )
+void Vector2::Clamp( const Vector2& min, const Vector2& max ) noexcept
 {
   Dali::ClampInPlace<float>( x, min.x, max.x );
   Dali::ClampInPlace<float>( y, min.y, max.y );
 }
 
-std::ostream& operator<< (std::ostream& o, const Vector2& vector)
+std::ostream& operator<< (std::ostream& o, const Vector2& vector) noexcept
 {
   return o << "[" << vector.x << ", " << vector.y << "]";
 }
 
-Vector2 Clamp( const Vector2& v, const float& min, const float& max )
+Vector2 Clamp( const Vector2& v, const float& min, const float& max ) noexcept
 {
   Vector2 result( v );
   result.Clamp( Vector2( min, min ) , Vector2( max, max ) );
