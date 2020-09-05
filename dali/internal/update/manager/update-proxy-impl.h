@@ -168,7 +168,7 @@ private:
    * @return A pointer to the required node if found.
    * @note This caches the last accessed node.
    */
-  SceneGraph::Node* GetNodeWithId( uint32_t id ) const;
+  SceneGraph::Node* GetNodeWithId( uint32_t id ) const noexcept;
 
   /**
    * @brief Adds a property-resetter for non-transform properties so that they can be reset to their base value every frame.

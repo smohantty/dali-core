@@ -71,7 +71,7 @@ public:
    * Default Constructor.
    * @param[in]  updateManager  A reference to the update-manager
    */
-  PropertyModifier( SceneGraph::UpdateManager& updateManager )
+  PropertyModifier( SceneGraph::UpdateManager& updateManager ) noexcept
   : mProperties(),
     mLifecycleObservers(),
     mUpdateManager( &updateManager )
@@ -81,7 +81,7 @@ public:
   /**
    * Non-virtual destructor.
    */
-  ~PropertyModifier()
+  ~PropertyModifier() noexcept
   {
     for( auto& observer : mLifecycleObservers )
     {
@@ -97,7 +97,7 @@ public:
   /**
    * Move constructor.
    */
-  PropertyModifier( PropertyModifier&& other )
+  PropertyModifier( PropertyModifier&& other ) noexcept
   : mProperties( std::move( other.mProperties ) ),
     mLifecycleObservers( std::move( other.mLifecycleObservers ) ),
     mUpdateManager( std::move( other.mUpdateManager ) )
@@ -127,7 +127,7 @@ public:
    * Allows Resetter to track the life-cycle of this object.
    * @param[in]  observer  The observer to add.
    */
-  void AddLifecycleObserver( LifecycleObserver& observer )
+  void AddLifecycleObserver( LifecycleObserver& observer ) noexcept
   {
     mLifecycleObservers.push_back( &observer );
   }
@@ -146,7 +146,7 @@ public:
    * @param[in]  node          The associated Node
    * @param[in]  propertyBase  The associated PropertyBase
    */
-  void AddResetter( SceneGraph::Node& node, SceneGraph::PropertyBase& propertyBase )
+  void AddResetter( SceneGraph::Node& node, SceneGraph::PropertyBase& propertyBase ) noexcept
   {
     // Check if we've already added a resetter for this node and property to the update-manager
     NodePropertyPair pair{ &node, &propertyBase };

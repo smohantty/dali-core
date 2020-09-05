@@ -83,7 +83,7 @@ public:
    *
    * @note Ownership of the callback is passed onto this class.
    */
-  void AddFrameRenderedCallback( CallbackBase* callback, int32_t frameId );
+  void AddFrameRenderedCallback( CallbackBase* callback, int32_t frameId ) noexcept;
 
   /**
    * @brief Adds a callback that is called when the frame is displayed on the display.
@@ -99,21 +99,21 @@ public:
    *
    * @note Ownership of the callback is passed onto this class.
    */
-  void AddFramePresentedCallback( CallbackBase* callback, int32_t frameId );
+  void AddFramePresentedCallback( CallbackBase* callback, int32_t frameId ) noexcept;
 
   /**
    * @brief Gets the callback list that is called when the frame rendering is done by the graphics driver.
    *
    * @param[out] callbacks The callback list
    */
-  void GetFrameRenderedCallback( Dali::Integration::Scene::FrameCallbackContainer& callbacks );
+  void GetFrameRenderedCallback( Dali::Integration::Scene::FrameCallbackContainer& callbacks ) noexcept;
 
   /**
    * @brief Gets the callback list that is called when the frame is displayed on the display.
    *
    * @param[out] callbacks The callback list
    */
-  void GetFramePresentedCallback( Dali::Integration::Scene::FrameCallbackContainer& callbacks );
+  void GetFramePresentedCallback( Dali::Integration::Scene::FrameCallbackContainer& callbacks ) noexcept;
 
 private:
 

@@ -28,14 +28,14 @@ namespace Internal
 namespace SceneGraph
 {
 
-Scene::Scene()
+Scene::Scene() noexcept
 : mContext( nullptr ),
   mFrameRenderedCallbacks(),
   mFramePresentedCallbacks()
 {
 }
 
-Scene::~Scene()
+Scene::~Scene() noexcept
 {
   mFrameRenderedCallbacks.clear();
   mFramePresentedCallbacks.clear();
@@ -56,17 +56,17 @@ RenderInstructionContainer& Scene::GetRenderInstructions()
   return mInstructions;
 }
 
-void Scene::AddFrameRenderedCallback( CallbackBase* callback, int32_t frameId )
+void Scene::AddFrameRenderedCallback( CallbackBase* callback, int32_t frameId ) noexcept
 {
   mFrameRenderedCallbacks.push_back( std::make_pair( std::unique_ptr< CallbackBase >( callback ), frameId ) );
 }
 
-void Scene::AddFramePresentedCallback( CallbackBase* callback, int32_t frameId )
+void Scene::AddFramePresentedCallback( CallbackBase* callback, int32_t frameId ) noexcept
 {
   mFramePresentedCallbacks.push_back( std::make_pair( std::unique_ptr< CallbackBase >( callback ), frameId ) );
 }
 
-void Scene::GetFrameRenderedCallback( Dali::Integration::Scene::FrameCallbackContainer& callbacks )
+void Scene::GetFrameRenderedCallback( Dali::Integration::Scene::FrameCallbackContainer& callbacks ) noexcept
 {
   // Transfer owership of the callbacks
   for( auto&& iter : mFrameRenderedCallbacks )
@@ -77,7 +77,7 @@ void Scene::GetFrameRenderedCallback( Dali::Integration::Scene::FrameCallbackCon
   mFrameRenderedCallbacks.clear();
 }
 
-void Scene::GetFramePresentedCallback( Dali::Integration::Scene::FrameCallbackContainer& callbacks )
+void Scene::GetFramePresentedCallback( Dali::Integration::Scene::FrameCallbackContainer& callbacks ) noexcept
 {
   // Transfer owership of the callbacks
   for( auto&& iter : mFramePresentedCallbacks )

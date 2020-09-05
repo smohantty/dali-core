@@ -422,7 +422,7 @@ AnimationPlaylist& Core::GetAnimationPlaylist() const
   return *(mAnimationPlaylist);
 }
 
-void Core::AddScene( Scene* scene )
+void Core::AddScene( Scene* scene ) noexcept
 {
   mScenes.push_back( scene );
 }

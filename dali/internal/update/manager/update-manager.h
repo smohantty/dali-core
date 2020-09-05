@@ -98,11 +98,9 @@ struct NodeDepthPair
 
 struct NodeDepths
 {
-  NodeDepths()
-  {
-  }
+  NodeDepths() noexcept = default;
 
-  void Add( SceneGraph::Node* node, uint32_t sortedDepth )
+  void Add( SceneGraph::Node* node, uint32_t sortedDepth ) noexcept
   {
     nodeDepths.push_back( NodeDepthPair( node, sortedDepth ) );
   }
@@ -696,7 +694,7 @@ private:
    * Helper to reset all Node properties
    * @param[in] bufferIndex to use
    */
-  void ResetProperties( BufferIndex bufferIndex );
+  void ResetProperties( BufferIndex bufferIndex ) noexcept;
 
   /**
    * Perform gesture updates.

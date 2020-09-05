@@ -65,7 +65,7 @@ public:
    * @note The default minimum motion time is 1 ms between motion events and the default behaviour
    *       is to throttle X and Y movement by 1.
    */
-  TouchEventCombiner();
+  TouchEventCombiner() noexcept;
 
   /**
    * Construction with parameters.
@@ -74,7 +74,7 @@ public:
    * @param[in]  minMotionYDistance  The minimum distance a finger has to be moved between vertical motion events.
    * @note Will assert if any of the parameters is negative.
    */
-  TouchEventCombiner( uint32_t minMotionTime, float minMotionXDistance, float minMotionYDistance );
+  TouchEventCombiner( uint32_t minMotionTime, float minMotionXDistance, float minMotionYDistance ) noexcept;
 
   /**
    * Construction with parameters.
@@ -82,12 +82,12 @@ public:
    * @param[in]  minMotionDistance  A Vector2 representing the minimum distance a finger has to be moved between horizontal and vertical motion events.
    * @note Will assert if any of the parameters is negative.
    */
-  TouchEventCombiner( uint32_t minMotionTime, Vector2 minMotionDistance );
+  TouchEventCombiner( uint32_t minMotionTime, Vector2 minMotionDistance ) noexcept;
 
   /**
    * Non virtual destructor
    */
-  ~TouchEventCombiner();
+  ~TouchEventCombiner() noexcept;
 
 public:
 
@@ -105,7 +105,7 @@ public:
    *
    * @return true if the point is beyond the different thresholds set thus, should be sent to core, false otherwise.
    */
-  EventDispatchType GetNextTouchEvent( const Point& point, uint32_t time, TouchEvent& touchEvent, HoverEvent& hoverEvent );
+  EventDispatchType GetNextTouchEvent( const Point& point, uint32_t time, TouchEvent& touchEvent, HoverEvent& hoverEvent ) noexcept;
 
   /**
    * Sets the minimum time (in ms) that should occur between motion events.

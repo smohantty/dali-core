@@ -238,7 +238,7 @@ void UpdateProxy::NodeHierarchyChanged()
   mPropertyModifier.reset();
 }
 
-SceneGraph::Node* UpdateProxy::GetNodeWithId( uint32_t id ) const
+SceneGraph::Node* UpdateProxy::GetNodeWithId( uint32_t id ) const noexcept
 {
   SceneGraph::Node* node = NULL;
 

@@ -187,7 +187,7 @@ public:
   /**
    * @copydoc Dali::Internal::ThreadLocalStorage::AddScene()
    */
-  void AddScene( Scene* scene );
+  void AddScene( Scene* scene ) noexcept;
 
   /**
    * @copydoc Dali::Internal::ThreadLocalStorage::RemoveScene()

@@ -43,7 +43,7 @@ MultiPointEvent::~MultiPointEvent()
 {
 }
 
-void MultiPointEvent::AddPoint( const Point& point )
+void MultiPointEvent::AddPoint( const Point& point ) noexcept
 {
   points.push_back(point);
 }

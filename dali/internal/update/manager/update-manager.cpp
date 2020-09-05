@@ -683,7 +683,7 @@ bool UpdateManager::FlushQueue()
   return mImpl->messageQueue.FlushQueue();
 }
 
-void UpdateManager::ResetProperties( BufferIndex bufferIndex )
+void UpdateManager::ResetProperties( BufferIndex bufferIndex ) noexcept
 {
   // Clear the "animations finished" flag; This should be set if any (previously playing) animation is stopped
   mImpl->animationFinishedDuringUpdate = false;

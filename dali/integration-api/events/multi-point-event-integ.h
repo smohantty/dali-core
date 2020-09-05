@@ -81,7 +81,7 @@ public:
    * @brief Adds a point to the MultiPointEvent.
    * @param[in]  point  The point to add.
    */
-  void AddPoint( const Point& point );
+  void AddPoint( const Point& point ) noexcept;
 
   /**
    * @brief Retrieves the Point at position point.

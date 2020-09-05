@@ -60,31 +60,31 @@ struct TouchEventCombiner::PointInfo
   uint32_t time; ///< The time the point event took place.
 };
 
-TouchEventCombiner::TouchEventCombiner()
+TouchEventCombiner::TouchEventCombiner() noexcept
 : mMinMotionTime( DEFAULT_MINIMUM_MOTION_TIME ),
   mMinMotionDistance( DEFAULT_MINIMUM_MOTION_DISTANCE )
 {
 }
 
-TouchEventCombiner::TouchEventCombiner( uint32_t minMotionTime, float minMotionXDistance, float minMotionYDistance )
+TouchEventCombiner::TouchEventCombiner( uint32_t minMotionTime, float minMotionXDistance, float minMotionYDistance ) noexcept
 : mMinMotionTime( minMotionTime ),
   mMinMotionDistance( minMotionXDistance, minMotionYDistance )
 {
   DALI_ASSERT_ALWAYS( minMotionXDistance >= 0.0f && minMotionYDistance >= 0.0f && "Negative values not allowed\n" );
 }
 
-TouchEventCombiner::TouchEventCombiner( uint32_t minMotionTime, Vector2 minMotionDistance )
+TouchEventCombiner::TouchEventCombiner( uint32_t minMotionTime, Vector2 minMotionDistance ) noexcept
 : mMinMotionTime( minMotionTime ),
   mMinMotionDistance( minMotionDistance )
 {
   DALI_ASSERT_ALWAYS( minMotionDistance.x >= 0.0f && minMotionDistance.y >= 0.0f && "Negative values not allowed\n" );
 }
 
-TouchEventCombiner::~TouchEventCombiner()
+TouchEventCombiner::~TouchEventCombiner() noexcept
 {
 }
 
-TouchEventCombiner::EventDispatchType TouchEventCombiner::GetNextTouchEvent( const Point& point, uint32_t time, TouchEvent& touchEvent, HoverEvent& hoverEvent )
+TouchEventCombiner::EventDispatchType TouchEventCombiner::GetNextTouchEvent( const Point& point, uint32_t time, TouchEvent& touchEvent, HoverEvent& hoverEvent ) noexcept
 {
   TouchEventCombiner::EventDispatchType dispatchEvent( TouchEventCombiner::DISPATCH_NONE );
   const PointState::Type state = point.GetState();
