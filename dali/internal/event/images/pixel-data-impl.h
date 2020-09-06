@@ -122,12 +122,12 @@ private:
   /*
    * Undefined copy constructor.
    */
-  PixelData(const PixelData& other);
+  PixelData(const PixelData& other) = delete;
 
   /*
    * Undefined assignment operator.
    */
-  PixelData& operator = (const PixelData& other);
+  PixelData& operator = (const PixelData& other) = delete;
 
 private:
 

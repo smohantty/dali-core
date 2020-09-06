@@ -110,8 +110,8 @@ public: // To be called by GestureEventProcessor
 private:
 
   // Undefined
-  PinchGestureProcessor(const PinchGestureProcessor&);
-  PinchGestureProcessor& operator=(const PinchGestureProcessor& rhs);
+  PinchGestureProcessor(const PinchGestureProcessor&) = delete;
+  PinchGestureProcessor& operator=(const PinchGestureProcessor& rhs) = delete;
 
 private:
 

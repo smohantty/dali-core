@@ -155,8 +155,8 @@ private:
 
   // Undefined
 
-  GestureProcessor( const GestureProcessor& );
-  GestureProcessor& operator=( const GestureProcessor& );
+  GestureProcessor( const GestureProcessor& ) = delete;
+  GestureProcessor& operator=( const GestureProcessor& ) = delete;
 
   // SceneObject overrides
 

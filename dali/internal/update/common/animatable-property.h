@@ -280,10 +280,10 @@ public:
 private:
 
   // Undefined
-  AnimatableProperty(const AnimatableProperty& property);
+  AnimatableProperty(const AnimatableProperty& property) = delete;
 
   // Undefined
-  AnimatableProperty& operator=(const AnimatableProperty& rhs);
+  AnimatableProperty& operator=(const AnimatableProperty& rhs) = delete;
 
 private:
 
@@ -460,10 +460,10 @@ public:
 private:
 
   // Undefined
-  AnimatableProperty(const AnimatableProperty& property);
+  AnimatableProperty(const AnimatableProperty& property) = delete;
 
   // Undefined
-  AnimatableProperty& operator=(const AnimatableProperty& rhs);
+  AnimatableProperty& operator=(const AnimatableProperty& rhs) = delete;
 
 private:
 
@@ -641,10 +641,10 @@ public:
 private:
 
   // Undefined
-  AnimatableProperty(const AnimatableProperty& property);
+  AnimatableProperty(const AnimatableProperty& property) = delete;
 
   // Undefined
-  AnimatableProperty& operator=(const AnimatableProperty& rhs);
+  AnimatableProperty& operator=(const AnimatableProperty& rhs) = delete;
 
 private:
 
@@ -901,10 +901,10 @@ public:
 private:
 
   // Undefined
-  AnimatableProperty(const AnimatableProperty& property);
+  AnimatableProperty(const AnimatableProperty& property) = delete;
 
   // Undefined
-  AnimatableProperty& operator=(const AnimatableProperty& rhs);
+  AnimatableProperty& operator=(const AnimatableProperty& rhs) = delete;
 
 private:
 
@@ -1234,10 +1234,10 @@ public:
 private:
 
   // Undefined
-  AnimatableProperty(const AnimatableProperty& property);
+  AnimatableProperty(const AnimatableProperty& property) = delete;
 
   // Undefined
-  AnimatableProperty& operator=(const AnimatableProperty& rhs);
+  AnimatableProperty& operator=(const AnimatableProperty& rhs) = delete;
 
 private:
 
@@ -1609,10 +1609,10 @@ public:
 private:
 
   // Undefined
-  AnimatableProperty(const AnimatableProperty& property);
+  AnimatableProperty(const AnimatableProperty& property) = delete;
 
   // Undefined
-  AnimatableProperty& operator=(const AnimatableProperty& rhs);
+  AnimatableProperty& operator=(const AnimatableProperty& rhs) = delete;
 
 private:
 
@@ -1774,10 +1774,10 @@ public:
 private:
 
   // Undefined
-  AnimatableProperty(const AnimatableProperty& property);
+  AnimatableProperty(const AnimatableProperty& property) = delete;
 
   // Undefined
-  AnimatableProperty& operator=(const AnimatableProperty& rhs);
+  AnimatableProperty& operator=(const AnimatableProperty& rhs) = delete;
 
 private:
 
@@ -1935,10 +1935,10 @@ public:
 private:
 
   // Undefined
-  AnimatableProperty(const AnimatableProperty& property);
+  AnimatableProperty(const AnimatableProperty& property) = delete;
 
   // Undefined
-  AnimatableProperty& operator=(const AnimatableProperty& rhs);
+  AnimatableProperty& operator=(const AnimatableProperty& rhs) = delete;
 
 private:
 
@@ -2094,10 +2094,10 @@ public:
 private:
 
   // Undefined
-  AnimatableProperty(const AnimatableProperty& property);
+  AnimatableProperty(const AnimatableProperty& property) = delete;
 
   // Undefined
-  AnimatableProperty& operator=(const AnimatableProperty& rhs);
+  AnimatableProperty& operator=(const AnimatableProperty& rhs) = delete;
 
 private:
 

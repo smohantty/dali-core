@@ -158,8 +158,8 @@ protected:
 private:
 
   // Not implemented
-  PropertyMetadata( const PropertyMetadata& );
-  PropertyMetadata& operator=( const PropertyMetadata& );
+  PropertyMetadata( const PropertyMetadata& ) = delete;
+  PropertyMetadata& operator=( const PropertyMetadata& ) = delete;
 
 public: // Data
 
@@ -236,9 +236,9 @@ public:
 private:
 
   // Not implemented
-  AnimatablePropertyMetadata();
-  AnimatablePropertyMetadata( const AnimatablePropertyMetadata& );
-  AnimatablePropertyMetadata& operator=( const AnimatablePropertyMetadata& );
+  AnimatablePropertyMetadata() = delete;
+  AnimatablePropertyMetadata( const AnimatablePropertyMetadata& ) = delete;
+  AnimatablePropertyMetadata& operator=( const AnimatablePropertyMetadata& ) = delete;
 
 public: // Data
 
@@ -297,9 +297,9 @@ public:
 private:
 
   // Not implemented
-  CustomPropertyMetadata();
-  CustomPropertyMetadata( const CustomPropertyMetadata& );
-  CustomPropertyMetadata& operator=( const CustomPropertyMetadata& );
+  CustomPropertyMetadata() = delete;
+  CustomPropertyMetadata( const CustomPropertyMetadata& ) = delete;
+  CustomPropertyMetadata& operator=( const CustomPropertyMetadata& ) = delete;
 
 public: // Data
 

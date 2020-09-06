@@ -82,10 +82,10 @@ public:
 private:
 
   // Undefined
-  NotificationManager( const NotificationManager& notificationManager );
+  NotificationManager( const NotificationManager& notificationManager ) = delete;
 
   // Undefined
-  NotificationManager& operator=( const NotificationManager& notificationManager );
+  NotificationManager& operator=( const NotificationManager& notificationManager ) = delete;
 
 private:
 

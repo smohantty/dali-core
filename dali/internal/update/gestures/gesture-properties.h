@@ -128,10 +128,10 @@ public:
 private:
 
   // Undefined
-  GestureProperty(const GestureProperty& property);
+  GestureProperty(const GestureProperty& property) = delete;
 
   // Undefined
-  GestureProperty& operator=(const GestureProperty& rhs);
+  GestureProperty& operator=(const GestureProperty& rhs) = delete;
 
 protected:
 

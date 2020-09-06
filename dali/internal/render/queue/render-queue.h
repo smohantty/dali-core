@@ -84,10 +84,10 @@ private:
   void LimitBufferCapacity( BufferIndex bufferIndex );
 
   // Undefined
-  RenderQueue( const RenderQueue& );
+  RenderQueue( const RenderQueue& ) = delete;
 
   // Undefined
-  RenderQueue& operator=( const RenderQueue& rhs );
+  RenderQueue& operator=( const RenderQueue& rhs ) = delete;
 
 private:
 

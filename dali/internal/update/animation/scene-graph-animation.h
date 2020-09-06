@@ -320,10 +320,10 @@ private:
   void SetAnimatorsActive( bool active );
 
   // Undefined
-  Animation(const Animation&);
+  Animation(const Animation&) = delete;
 
   // Undefined
-  Animation& operator=(const Animation& rhs);
+  Animation& operator=(const Animation& rhs) = delete;
 
 protected:
 

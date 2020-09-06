@@ -84,8 +84,8 @@ private: // implementation
   void Initialize( Dali::Property::Map& format );
 
 private: // unimplemented methods
-  VertexBuffer( const VertexBuffer& );
-  VertexBuffer& operator=( const VertexBuffer& );
+  VertexBuffer( const VertexBuffer& ) = delete;
+  VertexBuffer& operator=( const VertexBuffer& ) = delete;
 
 private: // data
   EventThreadServices& mEventThreadServices;    ///<Used to send messages to the render thread via update thread

@@ -438,10 +438,10 @@ public:
 private:
 
   // Undefined
-  TransformManagerVector3Input(const TransformManagerVector3Input& property);
+  TransformManagerVector3Input(const TransformManagerVector3Input& property) = delete;
 
   // Undefined
-  TransformManagerVector3Input& operator=(const TransformManagerVector3Input& rhs);
+  TransformManagerVector3Input& operator=(const TransformManagerVector3Input& rhs) = delete;
 
 public:
 
@@ -589,10 +589,10 @@ public:
 private:
 
   // Undefined
-  TransformManagerQuaternionInput(const TransformManagerQuaternionInput& property);
+  TransformManagerQuaternionInput(const TransformManagerQuaternionInput& property) = delete;
 
   // Undefined
-  TransformManagerQuaternionInput& operator=(const TransformManagerQuaternionInput& rhs);
+  TransformManagerQuaternionInput& operator=(const TransformManagerQuaternionInput& rhs) = delete;
 
 public:
 
@@ -725,10 +725,10 @@ public:
 private:
 
   // Undefined
-  TransformManagerMatrixInput(const TransformManagerMatrixInput& property);
+  TransformManagerMatrixInput(const TransformManagerMatrixInput& property) = delete;
 
   // Undefined
-  TransformManagerMatrixInput& operator=(const TransformManagerMatrixInput& rhs);
+  TransformManagerMatrixInput& operator=(const TransformManagerMatrixInput& rhs) = delete;
 
 public:
 

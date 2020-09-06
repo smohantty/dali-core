@@ -76,10 +76,10 @@ public:
 private:
 
   // Undefined
-  PropertyBase(const PropertyBase& property);
+  PropertyBase(const PropertyBase& property) = delete;
 
   // Undefined
-  PropertyBase& operator=(const PropertyBase& rhs);
+  PropertyBase& operator=(const PropertyBase& rhs) = delete;
 };
 
 } // namespace SceneGraph

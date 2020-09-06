@@ -111,10 +111,10 @@ struct BlendingOptions
 private:
 
   // Undefined copy constructor.
-  BlendingOptions(const BlendingOptions& typePath);
+  BlendingOptions(const BlendingOptions& typePath) = delete;
 
   // Undefined copy constructor.
-  BlendingOptions& operator=(const BlendingOptions& rhs);
+  BlendingOptions& operator=(const BlendingOptions& rhs) = delete;
 
 private:
 

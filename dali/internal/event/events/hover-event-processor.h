@@ -72,10 +72,10 @@ public:
 private:
 
   // Undefined
-  HoverEventProcessor(const HoverEventProcessor&);
+  HoverEventProcessor(const HoverEventProcessor&) = delete;
 
   // Undefined
-  HoverEventProcessor& operator=(const HoverEventProcessor& rhs);
+  HoverEventProcessor& operator=(const HoverEventProcessor& rhs) = delete;
 
   Scene& mScene; ///< Reference to the scene
   ActorObserver mLastPrimaryHitActor; ///< Stores the last primary point hit actor

@@ -151,12 +151,12 @@ private:
   /**
    * @brief Not defined.
    */
-  SignalDelegate( const SignalDelegate& rhs );
+  SignalDelegate( const SignalDelegate& rhs ) = delete;
 
   /**
    * @brief Not defined.
    */
-  const SignalDelegate& operator=( const SignalDelegate& rhs );
+  const SignalDelegate& operator=( const SignalDelegate& rhs ) = delete;
 
 private:
   bool mIsConnected;         ///< Boolean to know if it is connected already.

@@ -160,10 +160,10 @@ public:
 private:
 
   // Undefined
-  MemoryPoolObjectAllocator( const MemoryPoolObjectAllocator& memoryPoolObjectAllocator );
+  MemoryPoolObjectAllocator( const MemoryPoolObjectAllocator& memoryPoolObjectAllocator ) = delete;
 
   // Undefined
-  MemoryPoolObjectAllocator& operator=( const MemoryPoolObjectAllocator& memoryPoolObjectAllocator );
+  MemoryPoolObjectAllocator& operator=( const MemoryPoolObjectAllocator& memoryPoolObjectAllocator ) = delete;
 
 private:
 

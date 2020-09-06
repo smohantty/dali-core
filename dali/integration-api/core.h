@@ -429,14 +429,14 @@ private:
    * This avoids accidental calls to a default copy-constructor.
    * @param[in] core A reference to the object to copy.
    */
-  Core(const Core& core);
+  Core(const Core& core) = delete;
 
   /**
    * Undefined assignment operator.
    * This avoids accidental calls to a default assignment operator.
    * @param[in] rhs A reference to the object to copy.
    */
-  Core& operator=(const Core& rhs);
+  Core& operator=(const Core& rhs) = delete;
 
 private:
 

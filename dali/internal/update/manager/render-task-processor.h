@@ -76,8 +76,8 @@ private:
   /**
    * Undefine copy and assignment operators.
    */
-  RenderTaskProcessor( const RenderTaskProcessor& renderTaskProcessor );             ///< No definition
-  RenderTaskProcessor& operator=( const RenderTaskProcessor& renderTaskProcessor );  ///< No definition
+  RenderTaskProcessor( const RenderTaskProcessor& renderTaskProcessor ) = delete;             ///< No definition
+  RenderTaskProcessor& operator=( const RenderTaskProcessor& renderTaskProcessor ) = delete;  ///< No definition
 
 private:
 

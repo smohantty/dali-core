@@ -65,10 +65,10 @@ public:
 private:
 
   // Undefined
-  KeyEventProcessor(const KeyEventProcessor&);
+  KeyEventProcessor(const KeyEventProcessor&) = delete;
 
   // Undefined
-  KeyEventProcessor& operator=(const KeyEventProcessor& rhs);
+  KeyEventProcessor& operator=(const KeyEventProcessor& rhs) = delete;
 
 private:
 

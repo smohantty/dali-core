@@ -301,8 +301,8 @@ struct UpdateManager::Impl
 
 private:
 
-  Impl( const Impl& ); ///< Undefined
-  Impl& operator=( const Impl& ); ///< Undefined
+  Impl( const Impl& ) = delete; ///< Undefined
+  Impl& operator=( const Impl& ) = delete; ///< Undefined
 };
 
 UpdateManager::UpdateManager( NotificationManager& notificationManager,

@@ -93,8 +93,8 @@ protected:
 private:
 
   // Undefined
-  PinchGestureDetector(const PinchGestureDetector&);
-  PinchGestureDetector& operator=(const PinchGestureDetector& rhs);
+  PinchGestureDetector(const PinchGestureDetector&) = delete;
+  PinchGestureDetector& operator=(const PinchGestureDetector& rhs) = delete;
 
 private: // GestureDetector overrides
 

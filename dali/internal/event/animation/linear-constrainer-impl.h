@@ -191,10 +191,10 @@ private:
   LinearConstrainer();
 
   // Undefined
-  LinearConstrainer(const LinearConstrainer&);
+  LinearConstrainer(const LinearConstrainer&) = delete;
 
   // Undefined
-  LinearConstrainer& operator=(const LinearConstrainer& rhs);
+  LinearConstrainer& operator=(const LinearConstrainer& rhs) = delete;
 
   Dali::Vector<float> mValue;     ///< values for the linear map
   Dali::Vector<float> mProgress;  ///< Progress for each of the values normalized to [0,1]

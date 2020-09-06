@@ -120,10 +120,10 @@ protected:
 private:
 
   // Undefined
-  RenderTaskList(const RenderTaskList&);
+  RenderTaskList(const RenderTaskList&) = delete;
 
   // Undefined
-  RenderTaskList& operator=(const RenderTaskList&);
+  RenderTaskList& operator=(const RenderTaskList&) = delete;
 
 private:
 

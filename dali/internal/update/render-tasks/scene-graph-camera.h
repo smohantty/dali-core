@@ -258,9 +258,9 @@ private:
 
   // Non copyable
   // Undefined
-  Camera(const Camera&);
+  Camera(const Camera&) = delete;
   // Undefined
-  Camera& operator=(const Camera& rhs);
+  Camera& operator=(const Camera& rhs) = delete;
 
   /**
    * Recalculates the view matrix.

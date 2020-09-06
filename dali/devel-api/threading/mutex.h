@@ -79,8 +79,8 @@ public:
 private:
 
   /// Not implemented as Mutex is not copyable
-  Mutex( const Mutex& );
-  const Mutex& operator= ( const Mutex& );
+  Mutex( const Mutex& ) = delete;
+  const Mutex& operator= ( const Mutex& ) = delete;
 
   struct MutexImpl;
   MutexImpl* mImpl;

@@ -408,10 +408,10 @@ private:
   struct UniformIndexMap;
 
   // Undefined
-  Renderer( const Renderer& );
+  Renderer( const Renderer& ) = delete;
 
   // Undefined
-  Renderer& operator=( const Renderer& rhs );
+  Renderer& operator=( const Renderer& rhs ) = delete;
 
   /**
    * Sets blending options

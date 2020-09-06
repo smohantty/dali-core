@@ -173,10 +173,10 @@ protected:
 private:
 
   // Undefined
-  PropertyNotification(const PropertyNotification&);
+  PropertyNotification(const PropertyNotification&) = delete;
 
   // Undefined
-  PropertyNotification& operator=(const PropertyNotification& rhs);
+  PropertyNotification& operator=(const PropertyNotification& rhs) = delete;
 
 protected:
 

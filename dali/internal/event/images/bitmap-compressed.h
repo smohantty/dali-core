@@ -104,8 +104,8 @@ private:
 
   uint32_t mBufferSize;
 
-  BitmapCompressed(const BitmapCompressed& other);  ///< defined private to prevent use
-  BitmapCompressed& operator = (const BitmapCompressed& other); ///< defined private to prevent use
+  BitmapCompressed(const BitmapCompressed& other) = delete;  ///< defined private to prevent use
+  BitmapCompressed& operator = (const BitmapCompressed& other) = delete; ///< defined private to prevent use
 
   // Changes scope, should be at end of class
   DALI_LOG_OBJECT_STRING_DECLARATION;

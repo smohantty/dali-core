@@ -76,10 +76,10 @@ private:
   PropertyNotificationManager();
 
   // Undefined
-  PropertyNotificationManager(const PropertyNotificationManager&);
+  PropertyNotificationManager(const PropertyNotificationManager&) = delete;
 
   // Undefined
-  PropertyNotificationManager& operator=(const PropertyNotificationManager& rhs);
+  PropertyNotificationManager& operator=(const PropertyNotificationManager& rhs) = delete;
 
 private:
 

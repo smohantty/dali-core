@@ -257,12 +257,12 @@ private:
   /**
    * @brief Undefined Copy Constructor
    */
-  TypeRegistry(TypeRegistry &);
+  TypeRegistry(TypeRegistry &) = delete;
 
   /**
    * @brief Undefined Assignment Operator
    */
-  TypeRegistry& operator=(const TypeRegistry &);
+  TypeRegistry& operator=(const TypeRegistry &) = delete;
 };
 
 

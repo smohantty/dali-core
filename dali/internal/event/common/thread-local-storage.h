@@ -199,8 +199,8 @@ private:
   ~ThreadLocalStorage() override;
 
   // Undefined
-  ThreadLocalStorage( const ThreadLocalStorage& );
-  ThreadLocalStorage& operator=( ThreadLocalStorage& );
+  ThreadLocalStorage( const ThreadLocalStorage& ) = delete;
+  ThreadLocalStorage& operator=( ThreadLocalStorage& ) = delete;
 
 private:
 

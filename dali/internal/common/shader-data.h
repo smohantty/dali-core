@@ -158,8 +158,8 @@ public: // API
 
 private: // Not implemented
 
-  ShaderData(const ShaderData& other);            ///< no copying of this object
-  ShaderData& operator= (const ShaderData& rhs);  ///< no copying of this object
+  ShaderData(const ShaderData& other) = delete;            ///< no copying of this object
+  ShaderData& operator= (const ShaderData& rhs) = delete;  ///< no copying of this object
 
 private: // Data
 

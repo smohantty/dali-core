@@ -91,8 +91,8 @@ public: // To be called by GestureEventProcessor
 private:
 
   // Undefined
-  TapGestureProcessor(const TapGestureProcessor&);
-  TapGestureProcessor& operator=(const TapGestureProcessor& rhs);
+  TapGestureProcessor(const TapGestureProcessor&) = delete;
+  TapGestureProcessor& operator=(const TapGestureProcessor& rhs) = delete;
 
 private:
 

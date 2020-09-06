@@ -120,10 +120,10 @@ public:
 private:
 
   // Undefined
-  DiscardQueue( const DiscardQueue& );
+  DiscardQueue( const DiscardQueue& ) = delete;
 
   // Undefined
-  DiscardQueue& operator=( const DiscardQueue& rhs );
+  DiscardQueue& operator=( const DiscardQueue& rhs ) = delete;
 
 private:
 

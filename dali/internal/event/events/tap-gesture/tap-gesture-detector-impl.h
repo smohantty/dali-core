@@ -138,8 +138,8 @@ protected:
 private:
 
   // Undefined
-  TapGestureDetector(const TapGestureDetector&);
-  TapGestureDetector& operator=(const TapGestureDetector& rhs);
+  TapGestureDetector(const TapGestureDetector&) = delete;
+  TapGestureDetector& operator=(const TapGestureDetector& rhs) = delete;
 
 private: // GestureDetector overrides
 

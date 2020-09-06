@@ -70,10 +70,10 @@ struct FixedSizeMemoryPool::Impl
 
   private:
     // Undefined
-    Block( const Block& block );
+    Block( const Block& block ) = delete;
 
     // Undefined
-    Block& operator=( const Block& block );
+    Block& operator=( const Block& block ) = delete;
   };
 
   /**

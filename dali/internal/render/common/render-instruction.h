@@ -133,9 +133,9 @@ public:
 private:
 
   // Undefined
-  RenderInstruction(const RenderInstruction&);
+  RenderInstruction(const RenderInstruction&) = delete;
   // Undefined
-  RenderInstruction& operator=(const RenderInstruction& rhs);
+  RenderInstruction& operator=(const RenderInstruction& rhs) = delete;
 
 public: // Data
 

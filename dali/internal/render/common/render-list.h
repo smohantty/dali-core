@@ -263,8 +263,8 @@ private:
   /*
    * Copy constructor and assignment operator not defined
    */
-  RenderList( const RenderList& rhs );
-  const RenderList& operator=( const RenderList& rhs );
+  RenderList( const RenderList& rhs ) = delete;
+  const RenderList& operator=( const RenderList& rhs ) = delete;
 
   RenderItemContainer mItems; ///< Each item is a renderer and matrix pair
   uint32_t mNextFree;         ///< index for the next free item to use

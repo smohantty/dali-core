@@ -56,12 +56,12 @@ private:
   /**
    * Don't allow copy constructor
    */
-  KeyFrames(const KeyFrames& rhs);
+  KeyFrames(const KeyFrames& rhs) = delete;
 
   /**
    * Don't allow copy operator
    */
-  KeyFrames& operator=(const KeyFrames& rhs);
+  KeyFrames& operator=(const KeyFrames& rhs) = delete;
 
   /**
    * Create a specialization from the given type, and store it to the mSpec

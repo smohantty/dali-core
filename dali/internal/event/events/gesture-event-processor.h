@@ -301,8 +301,8 @@ public: // needed for PanGesture
 private:
 
   // Undefined
-  GestureEventProcessor(const GestureEventProcessor&);
-  GestureEventProcessor& operator=(const GestureEventProcessor& rhs);
+  GestureEventProcessor(const GestureEventProcessor&) = delete;
+  GestureEventProcessor& operator=(const GestureEventProcessor& rhs) = delete;
 
 private:
 

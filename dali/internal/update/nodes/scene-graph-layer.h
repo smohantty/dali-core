@@ -215,10 +215,10 @@ private:
   Layer();
 
   // Undefined
-  Layer(const Layer&);
+  Layer(const Layer&) = delete;
 
   // Undefined
-  Layer& operator=(const Layer& rhs);
+  Layer& operator=(const Layer& rhs) = delete;
 
 public: // For update-algorithms
 

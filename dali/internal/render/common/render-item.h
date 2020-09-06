@@ -96,8 +96,8 @@ private:
   RenderItem();
 
   // RenderItems should not be copied as they are heavy
-  RenderItem( const RenderItem& item );
-  RenderItem& operator = ( const RenderItem& item );
+  RenderItem( const RenderItem& item ) = delete;
+  RenderItem& operator = ( const RenderItem& item ) = delete;
 
 };
 

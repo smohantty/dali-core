@@ -99,7 +99,7 @@ public:
   private:
 
     // Undefined
-    Iterator& operator=(const Iterator& rhs);
+    Iterator& operator=(const Iterator& rhs) = delete;
 
   private:
 
@@ -123,10 +123,10 @@ public:
 private:
 
   // Undefined
-  MessageBuffer(const MessageBuffer&);
+  MessageBuffer(const MessageBuffer&) = delete;
 
   // Undefined
-  MessageBuffer& operator=(const MessageBuffer& rhs);
+  MessageBuffer& operator=(const MessageBuffer& rhs) = delete;
 
   /**
    * Helper to increase the capacity of the buffer.

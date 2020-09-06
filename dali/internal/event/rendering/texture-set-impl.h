@@ -104,8 +104,8 @@ protected:
   ~TextureSet() override;
 
 private: // unimplemented methods
-  TextureSet( const TextureSet& );
-  TextureSet& operator=( const TextureSet& );
+  TextureSet( const TextureSet& ) = delete;
+  TextureSet& operator=( const TextureSet& ) = delete;
 
 private: // Data
   EventThreadServices& mEventThreadServices;    ///<Used to send messages to the update thread

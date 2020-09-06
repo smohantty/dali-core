@@ -252,8 +252,8 @@ protected:
   ~Renderer() override;
 
 private: // unimplemented methods
-  Renderer( const Renderer& );
-  Renderer& operator=( const Renderer& );
+  Renderer( const Renderer& ) = delete;
+  Renderer& operator=( const Renderer& ) = delete;
 
 private: // data
 

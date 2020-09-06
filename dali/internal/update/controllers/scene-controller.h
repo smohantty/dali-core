@@ -69,10 +69,10 @@ public:
 private:
 
   // Undefined copy constructor.
-  SceneController( const SceneController& );
+  SceneController( const SceneController& ) = delete;
 
   // Undefined assignment operator.
-  SceneController& operator=( const SceneController& );
+  SceneController& operator=( const SceneController& ) = delete;
 };
 
 } // namespace SceneGraph

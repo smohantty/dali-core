@@ -73,10 +73,10 @@ public:  // from SceneController
 private:
 
   // Undefined copy constructor.
-  SceneControllerImpl( const SceneControllerImpl& );
+  SceneControllerImpl( const SceneControllerImpl& ) = delete;
 
   // Undefined assignment operator.
-  SceneControllerImpl& operator=( const SceneControllerImpl& );
+  SceneControllerImpl& operator=( const SceneControllerImpl& ) = delete;
 
 private:
 

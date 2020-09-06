@@ -174,8 +174,8 @@ private:
                            uint32_t bufferHeight);
 
 
-  BitmapPackedPixel(const BitmapPackedPixel& other);  ///< defined private to prevent use
-  BitmapPackedPixel& operator = (const BitmapPackedPixel& other); ///< defined private to prevent use
+  BitmapPackedPixel(const BitmapPackedPixel& other) = delete;  ///< defined private to prevent use
+  BitmapPackedPixel& operator = (const BitmapPackedPixel& other) = delete; ///< defined private to prevent use
 
   // Changes scope, should be at end of class
   DALI_LOG_OBJECT_STRING_DECLARATION;

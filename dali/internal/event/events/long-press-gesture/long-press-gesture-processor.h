@@ -103,8 +103,8 @@ public: // To be called by GestureEventProcessor
 private:
 
   // Undefined
-  LongPressGestureProcessor( const LongPressGestureProcessor& );
-  LongPressGestureProcessor& operator=( const LongPressGestureProcessor& rhs );
+  LongPressGestureProcessor( const LongPressGestureProcessor& ) = delete;
+  LongPressGestureProcessor& operator=( const LongPressGestureProcessor& rhs ) = delete;
 
 private:
 

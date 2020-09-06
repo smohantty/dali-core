@@ -67,10 +67,10 @@ public:
 private:
 
   // Not implemented
-  PropertyCondition(const PropertyCondition& rhs);
+  PropertyCondition(const PropertyCondition& rhs) = delete;
 
   // Not implemented
-  PropertyCondition& operator=(const PropertyCondition& rhs);
+  PropertyCondition& operator=(const PropertyCondition& rhs) = delete;
 
 public:
 

@@ -884,10 +884,10 @@ public: // From UniformMapDataProvider
 private:
 
   // Undefined
-  Node(const Node&);
+  Node(const Node&) = delete;
 
   // Undefined
-  Node& operator=(const Node& rhs);
+  Node& operator=(const Node& rhs) = delete;
 
   /**
    * Recursive helper to disconnect a Node and its children.

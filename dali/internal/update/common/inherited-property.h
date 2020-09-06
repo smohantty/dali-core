@@ -183,10 +183,10 @@ public:
 private:
 
   // Undefined
-  InheritedVector3(const InheritedVector3& property);
+  InheritedVector3(const InheritedVector3& property) = delete;
 
   // Undefined
-  InheritedVector3& operator=(const InheritedVector3& rhs);
+  InheritedVector3& operator=(const InheritedVector3& rhs) = delete;
 
 private:
 
@@ -352,9 +352,9 @@ public:
 private:
 
   // Undefined
-  InheritedColor(const InheritedColor& property);
+  InheritedColor(const InheritedColor& property) = delete;
   // Undefined
-  InheritedColor& operator=(const InheritedColor& rhs);
+  InheritedColor& operator=(const InheritedColor& rhs) = delete;
 
 private:
 
@@ -499,10 +499,10 @@ public:
 private:
 
   // Undefined
-  InheritedQuaternion(const InheritedQuaternion& property);
+  InheritedQuaternion(const InheritedQuaternion& property) = delete;
 
   // Undefined
-  InheritedQuaternion& operator=(const InheritedQuaternion& rhs);
+  InheritedQuaternion& operator=(const InheritedQuaternion& rhs) = delete;
 
 private:
 
@@ -655,10 +655,10 @@ public:
 private:
 
   // Undefined
-  InheritedMatrix(const InheritedMatrix& property);
+  InheritedMatrix(const InheritedMatrix& property) = delete;
 
   // Undefined
-  InheritedMatrix& operator=(const InheritedMatrix& rhs);
+  InheritedMatrix& operator=(const InheritedMatrix& rhs) = delete;
 
 private:
 

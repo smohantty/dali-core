@@ -74,10 +74,10 @@ struct BitmapResourceType
 private:
 
   // Undefined copy constructor.
-  BitmapResourceType(const BitmapResourceType& typePath);
+  BitmapResourceType(const BitmapResourceType& typePath) = delete;
 
   // Undefined assignment operator.
-  BitmapResourceType& operator=(const BitmapResourceType& rhs);
+  BitmapResourceType& operator=(const BitmapResourceType& rhs) = delete;
 
 };
 

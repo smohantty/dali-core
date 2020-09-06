@@ -71,10 +71,10 @@ public:
 private:
 
   // Undefined
-  SceneGraphBuffers(const SceneGraphBuffers&);
+  SceneGraphBuffers(const SceneGraphBuffers&) = delete;
 
   // Undefined
-  SceneGraphBuffers& operator=(const SceneGraphBuffers& rhs);
+  SceneGraphBuffers& operator=(const SceneGraphBuffers& rhs) = delete;
 
 private:
 

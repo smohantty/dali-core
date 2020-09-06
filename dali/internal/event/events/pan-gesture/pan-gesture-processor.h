@@ -232,8 +232,8 @@ public: // for PanGestureDetector
 private:
 
   // Undefined
-  PanGestureProcessor( const PanGestureProcessor& );
-  PanGestureProcessor& operator=( const PanGestureProcessor& rhs );
+  PanGestureProcessor( const PanGestureProcessor& ) = delete;
+  PanGestureProcessor& operator=( const PanGestureProcessor& rhs ) = delete;
 
   /**
    * Iterates through our GestureDetectors and determines if we need to ask the adaptor to update

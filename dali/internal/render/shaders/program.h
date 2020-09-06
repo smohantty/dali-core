@@ -322,9 +322,9 @@ public:
 
 private:
 
-  Program(); ///< default constructor, not defined
-  Program( const Program& ); ///< copy constructor, not defined
-  Program& operator=( const Program& ); ///< assignment operator, not defined
+  Program() = delete; ///< default constructor, not defined
+  Program( const Program& ) = delete; ///< copy constructor, not defined
+  Program& operator=( const Program& ) = delete; ///< assignment operator, not defined
 
   /**
    * Load the shader, from a precompiled binary if available, else from source code

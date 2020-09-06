@@ -59,8 +59,8 @@ public:
 private:
 
   // Undefined
-  PropertyOwnerMessageBase(const PropertyOwnerMessageBase&);
-  PropertyOwnerMessageBase& operator=(const PropertyOwnerMessageBase& rhs);
+  PropertyOwnerMessageBase(const PropertyOwnerMessageBase&) = delete;
+  PropertyOwnerMessageBase& operator=(const PropertyOwnerMessageBase& rhs) = delete;
 };
 
 /**

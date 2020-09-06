@@ -122,13 +122,13 @@ private:
    * @brief Not defined.
    * @SINCE_1_0.0
    */
-  FunctorDelegate( const FunctorDelegate& rhs );
+  FunctorDelegate( const FunctorDelegate& rhs ) = delete;
 
   /**
    * @brief Not defined.
    * @SINCE_1_0.0
    */
-  const FunctorDelegate& operator=( const FunctorDelegate& rhs );
+  const FunctorDelegate& operator=( const FunctorDelegate& rhs ) = delete;
 
   /**
    * @brief Private constructor.

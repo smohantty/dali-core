@@ -52,8 +52,8 @@ public:
 private:
 
   // Undefined
-  NodePropertyMessageBase(const NodePropertyMessageBase&);
-  NodePropertyMessageBase& operator=(const NodePropertyMessageBase& rhs);
+  NodePropertyMessageBase(const NodePropertyMessageBase&) = delete;
+  NodePropertyMessageBase& operator=(const NodePropertyMessageBase& rhs) = delete;
 
 protected:
 

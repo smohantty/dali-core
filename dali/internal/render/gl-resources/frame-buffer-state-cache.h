@@ -142,9 +142,9 @@ private:
    */
   void DeleteFrameBuffer( GLuint frameBufferId );
 
-  FrameBufferStateCache( const FrameBufferStateCache& );            ///< undefined copy constructor
+  FrameBufferStateCache( const FrameBufferStateCache& ) = delete;            ///< undefined copy constructor
 
-  FrameBufferStateCache& operator=( const FrameBufferStateCache& ); ///< undefined assignment operator
+  FrameBufferStateCache& operator=( const FrameBufferStateCache& ) = delete; ///< undefined assignment operator
 
 private: // data
 

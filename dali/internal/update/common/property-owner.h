@@ -234,10 +234,10 @@ protected:
 private:
 
   // Undefined
-  PropertyOwner(const PropertyOwner&);
+  PropertyOwner(const PropertyOwner&) = delete;
 
   // Undefined
-  PropertyOwner& operator=(const PropertyOwner& rhs);
+  PropertyOwner& operator=(const PropertyOwner& rhs) = delete;
 
 protected:
 

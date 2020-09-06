@@ -397,7 +397,7 @@ private:
   PanGesture();
 
   // Undefined
-  PanGesture(const PanGesture&);
+  PanGesture(const PanGesture&) = delete;
 
 private:
 
@@ -496,7 +496,7 @@ private:
 private:
 
   // Undefined
-  PanGesture& operator=(const PanGesture&);
+  PanGesture& operator=(const PanGesture&) = delete;
 
   // Defines information to be gathered by the gesture reading code.
   struct FrameGestureInfo

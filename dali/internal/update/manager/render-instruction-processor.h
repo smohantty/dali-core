@@ -114,8 +114,8 @@ private:
   /**
    * Undefine copy and assignment operators.
    */
-  RenderInstructionProcessor( const RenderInstructionProcessor& renderInstructionProcessor );             ///< No definition
-  RenderInstructionProcessor& operator=( const RenderInstructionProcessor& renderInstructionProcessor );  ///< No definition
+  RenderInstructionProcessor( const RenderInstructionProcessor& renderInstructionProcessor ) = delete;             ///< No definition
+  RenderInstructionProcessor& operator=( const RenderInstructionProcessor& renderInstructionProcessor ) = delete;  ///< No definition
 
 private:
 

@@ -647,10 +647,10 @@ private:
   }
 
   // Undefined
-  Animator( const Animator& );
+  Animator( const Animator& ) = delete;
 
   // Undefined
-  Animator& operator=( const Animator& );
+  Animator& operator=( const Animator& ) = delete;
 
 protected:
 

@@ -82,8 +82,8 @@ public:
     }
 
   private: // Not implemented
-    ProgramPair( const ProgramPair& );
-    ProgramPair& operator=( const ProgramPair& );
+    ProgramPair( const ProgramPair& ) = delete;
+    ProgramPair& operator=( const ProgramPair& ) = delete;
 
   private: // Data
     Program* mProgram;
@@ -173,8 +173,8 @@ private: // From ProgramCache
 
 private: // not implemented as non-copyable
 
-  ProgramController( const ProgramController& rhs );
-  ProgramController& operator=( const ProgramController& rhs );
+  ProgramController( const ProgramController& rhs ) = delete;
+  ProgramController& operator=( const ProgramController& rhs ) = delete;
 
 private: // Data
 

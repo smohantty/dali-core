@@ -84,10 +84,10 @@ private:
   void MemoryCacheInsert( Internal::ShaderData& shaderData );
 
   // Undefined
-  ShaderFactory( const ShaderFactory& );
+  ShaderFactory( const ShaderFactory& ) = delete;
 
   // Undefined
-  ShaderFactory& operator=( const ShaderFactory& rhs );
+  ShaderFactory& operator=( const ShaderFactory& rhs ) = delete;
 
 private:
   Dali::Vector< Internal::ShaderData* > mShaderBinaryCache; ///< Cache of pre-compiled shaders.

@@ -65,8 +65,8 @@ public:
   private:
 
     // Not implemented as ScopedLock cannot be copied:
-    ScopedLock( const ScopedLock& );
-    const ScopedLock& operator=( const ScopedLock& );
+    ScopedLock( const ScopedLock& ) = delete;
+    const ScopedLock& operator=( const ScopedLock& ) = delete;
   };
 
   /**
@@ -127,8 +127,8 @@ public:
 private:
 
   // Not implemented as ConditionalWait is not copyable
-  ConditionalWait( const ConditionalWait& );
-  const ConditionalWait& operator=( const ConditionalWait& );
+  ConditionalWait( const ConditionalWait& ) = delete;
+  const ConditionalWait& operator=( const ConditionalWait& ) = delete;
 
   struct ConditionalWaitImpl;
   ConditionalWaitImpl* mImpl;

@@ -70,10 +70,10 @@ public:
 private:
 
   // Undefined
-  DoubleBuffered<T>(const DoubleBuffered<T>&);
+  DoubleBuffered<T>(const DoubleBuffered<T>&) = delete;
 
   // Undefined
-  DoubleBuffered<T>& operator=(const DoubleBuffered<T>& rhs);
+  DoubleBuffered<T>& operator=(const DoubleBuffered<T>& rhs) = delete;
 
 private:
 
@@ -204,10 +204,10 @@ public:
 private:
 
   // Undefined
-  DoubleBuffered(const DoubleBuffered&);
+  DoubleBuffered(const DoubleBuffered&) = delete;
 
   // Undefined
-  DoubleBuffered& operator=(const DoubleBuffered& rhs);
+  DoubleBuffered& operator=(const DoubleBuffered& rhs) = delete;
 
 private:
 

@@ -74,10 +74,10 @@ public:
 private:
 
   // Undefined
-  TouchEventProcessor(const TouchEventProcessor&);
+  TouchEventProcessor(const TouchEventProcessor&) = delete;
 
   // Undefined
-  TouchEventProcessor& operator=(const TouchEventProcessor& rhs);
+  TouchEventProcessor& operator=(const TouchEventProcessor& rhs) = delete;
 
 private:
 

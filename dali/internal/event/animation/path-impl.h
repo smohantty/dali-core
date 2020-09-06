@@ -181,12 +181,12 @@ private:
   /**
    * Undefined
    */
-  Path(const Path& p);
+  Path(const Path& p) = delete;
 
   /**
    * Undefined
    */
-  Path& operator=(const Path& rhs);
+  Path& operator=(const Path& rhs) = delete;
 
   /**
    * Helper function to calculate the segment and local progress in that segment

@@ -97,9 +97,9 @@ private:
   };
 
 private:
-  LocklessBuffer(); ///< undefined default constructor, need to give size on construction
-  LocklessBuffer( const LocklessBuffer& );            ///< undefined copy constructor
-  LocklessBuffer& operator=( const LocklessBuffer& ); ///< undefined assignment operator
+  LocklessBuffer() = delete; ///< undefined default constructor, need to give size on construction
+  LocklessBuffer( const LocklessBuffer& ) = delete;            ///< undefined copy constructor
+  LocklessBuffer& operator=( const LocklessBuffer& ) = delete; ///< undefined assignment operator
 
 private:
   uint8_t* mBuffer[2];         ///< bitmap buffers

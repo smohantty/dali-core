@@ -104,10 +104,10 @@ private:
   AnimationPlaylist();
 
   // Undefined
-  AnimationPlaylist(const AnimationPlaylist&);
+  AnimationPlaylist(const AnimationPlaylist&) = delete;
 
   // Undefined
-  AnimationPlaylist& operator=(const AnimationPlaylist& rhs);
+  AnimationPlaylist& operator=(const AnimationPlaylist& rhs) = delete;
 
 private: // from CompleteNotificationInterface
 

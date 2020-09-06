@@ -141,8 +141,8 @@ protected:
 private:
 
   // Undefined
-  LongPressGestureDetector(const LongPressGestureDetector&);
-  LongPressGestureDetector& operator=(const LongPressGestureDetector& rhs);
+  LongPressGestureDetector(const LongPressGestureDetector&) = delete;
+  LongPressGestureDetector& operator=(const LongPressGestureDetector& rhs) = delete;
 
 private: // GestureDetector overrides
 

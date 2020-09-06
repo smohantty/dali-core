@@ -364,8 +364,8 @@ private:
 
   ResourcePolicy::Discardable mDiscardable; ///< Should delete the buffer when discard buffer is called.
 
-  Bitmap(const Bitmap& other);  ///< defined private to prevent use
-  Bitmap& operator = (const Bitmap& other); ///< defined private to prevent use
+  Bitmap(const Bitmap& other) = delete;  ///< defined private to prevent use
+  Bitmap& operator = (const Bitmap& other) = delete; ///< defined private to prevent use
 
   // Changes scope, should be at end of class
   DALI_LOG_OBJECT_STRING_DECLARATION;

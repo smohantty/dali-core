@@ -104,10 +104,10 @@ public:
 private:
 
   // Undefined
-  FixedSizeMemoryPool( const FixedSizeMemoryPool& fixedSizeMemoryPool );
+  FixedSizeMemoryPool( const FixedSizeMemoryPool& fixedSizeMemoryPool ) = delete;
 
   // Undefined
-  FixedSizeMemoryPool& operator=( const FixedSizeMemoryPool& fixedSizeMemoryPool );
+  FixedSizeMemoryPool& operator=( const FixedSizeMemoryPool& fixedSizeMemoryPool ) = delete;
 
 private:
 

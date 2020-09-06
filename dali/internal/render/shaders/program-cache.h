@@ -97,8 +97,8 @@ public: // API
 
 private: // not implemented as non-copyable
 
-  ProgramCache( const ProgramCache& rhs );
-  ProgramCache& operator=( const ProgramCache& rhs );
+  ProgramCache( const ProgramCache& rhs ) = delete;
+  ProgramCache& operator=( const ProgramCache& rhs ) = delete;
 
 };
 

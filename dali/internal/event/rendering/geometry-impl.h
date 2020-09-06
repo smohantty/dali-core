@@ -114,8 +114,8 @@ protected:
   ~Geometry() override;
 
 private: // unimplemented methods
-  Geometry( const Geometry& );
-  Geometry& operator=( const Geometry& );
+  Geometry( const Geometry& ) = delete;
+  Geometry& operator=( const Geometry& ) = delete;
 
 private: // data
 

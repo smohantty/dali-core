@@ -163,10 +163,10 @@ private:
   PathConstrainer();
 
   // Undefined
-  PathConstrainer(const PathConstrainer&);
+  PathConstrainer(const PathConstrainer&) = delete;
 
   // Undefined
-  PathConstrainer& operator=(const PathConstrainer& rhs);
+  PathConstrainer& operator=(const PathConstrainer& rhs) = delete;
 
   PathPtr mPath;    ///< The path used in the constraints
   Vector3 mForward; ///< Vector in object space which will be aligned with the tangent of the path

@@ -137,10 +137,10 @@ private:
   static bool EvalFalse( const Dali::PropertyInput& value, Dali::Internal::PropertyNotification::RawArgumentContainer& arg );
 
   // Undefined
-  PropertyNotification(const PropertyNotification&);
+  PropertyNotification(const PropertyNotification&) = delete;
 
   // Undefined
-  PropertyNotification& operator=(const PropertyNotification& rhs);
+  PropertyNotification& operator=(const PropertyNotification& rhs) = delete;
 
 protected:
 

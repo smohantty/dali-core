@@ -64,10 +64,10 @@ public:
 private:
 
   // Undefined
-  WheelEventProcessor(const WheelEventProcessor&);
+  WheelEventProcessor(const WheelEventProcessor&) = delete;
 
   // Undefined
-  WheelEventProcessor& operator=(const WheelEventProcessor& rhs);
+  WheelEventProcessor& operator=(const WheelEventProcessor& rhs) = delete;
 
 private:
 
