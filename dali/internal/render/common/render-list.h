@@ -61,8 +61,8 @@ public:
    */
   RenderList()
   : mNextFree( 0 ),
-    mClippingBox( NULL ),
-    mSourceLayer( NULL ),
+    mClippingBox( nullptr ),
+    mSourceLayer( nullptr ),
     mHasColorRenderItems( false )
   {
   }
@@ -85,7 +85,7 @@ public:
     mNextFree = 0;
 
     delete mClippingBox;
-    mClippingBox = NULL;
+    mClippingBox = nullptr;
   }
 
   /**
@@ -193,7 +193,7 @@ public:
    */
   bool IsClipping() const
   {
-    return ( NULL != mClippingBox );
+    return ( nullptr != mClippingBox );
   }
 
   /**
