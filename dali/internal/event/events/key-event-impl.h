@@ -29,7 +29,7 @@ namespace Internal
 {
 
 class KeyEvent;
-typedef IntrusivePtr< KeyEvent > KeyEventPtr;
+using KeyEventPtr = IntrusivePtr<KeyEvent>;
 
 /**
  * @copydoc Dali::KeyEvent

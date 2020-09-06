@@ -42,7 +42,7 @@ class DALI_CORE_API Property::Array
 {
 public:
 
-  typedef std::size_t SizeType;
+  using SizeType = std::size_t;
 
   /**
    * @brief Default constructor.

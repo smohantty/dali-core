@@ -34,8 +34,8 @@ namespace Internal
 
 class EventThreadServices;
 class Object;
-typedef Dali::Vector<Object*>     ObjectContainer;
-typedef ObjectContainer::Iterator ObjectIter;
+using ObjectContainer = Dali::Vector<Object *>;
+using ObjectIter = ObjectContainer::Iterator;
 
 namespace SceneGraph
 {
@@ -52,7 +52,7 @@ class ConstraintBase : public BaseObject, public Object::Observer
 {
 public:
 
-  typedef Dali::Constraint::RemoveAction RemoveAction;
+  using RemoveAction = Dali::Constraint::RemoveAction;
 
   /**
    * Constructor.

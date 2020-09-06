@@ -109,7 +109,7 @@ public:
 
 private:
 
-  typedef Vector< RelayoutInfo* > RelayoutInfoContainer;
+  using RelayoutInfoContainer = Vector<RelayoutInfo *>;
 
   RelayoutInfoContainer mRelayoutInfos;     ///< The list of relayout infos
 

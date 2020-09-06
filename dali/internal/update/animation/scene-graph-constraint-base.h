@@ -41,8 +41,8 @@ template <> struct ParameterType< Dali::Constraint::RemoveAction >
 namespace SceneGraph
 {
 
-typedef Dali::Vector<PropertyOwner*>     PropertyOwnerContainer;
-typedef PropertyOwnerContainer::Iterator PropertyOwnerIter;
+using PropertyOwnerContainer = Dali::Vector<PropertyOwner *>;
+using PropertyOwnerIter = PropertyOwnerContainer::Iterator;
 
 /**
  * An abstract base class for Constraints.
@@ -71,7 +71,7 @@ public:
 
 public:
 
-  typedef Dali::Constraint::RemoveAction RemoveAction;
+  using RemoveAction = Dali::Constraint::RemoveAction;
 
   /**
    * Constructor
@@ -251,7 +251,7 @@ private:
 
 inline void  SetRemoveActionMessage( EventThreadServices& eventThreadServices, const ConstraintBase& constraint, Dali::Constraint::RemoveAction removeAction )
 {
-  typedef MessageValue1< ConstraintBase, Dali::Constraint::RemoveAction > LocalType;
+  using LocalType = MessageValue1<ConstraintBase, Dali::Constraint::RemoveAction>;
 
   // Reserve some memory inside the message queue
   uint32_t* slot = eventThreadServices.ReserveMessageSlot( sizeof( LocalType ) );

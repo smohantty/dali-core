@@ -34,7 +34,7 @@ namespace CSharpTypeInfo
    * @param[in] typeName The type name of the object to be created.
    * @return Pointer to a BaseHandle
    */
-  typedef BaseHandle* (*CreateFunction)(const char* const typeName);
+  using CreateFunction = BaseHandle *(*)(const char *const);
 
   /**
    * @brief Callback to set an event-thread only property.
@@ -44,7 +44,7 @@ namespace CSharpTypeInfo
    * @param[in] value The new value of the property for the object specified.
    * @see PropertyRegistration.
    */
-  typedef void (*SetPropertyFunction)( BaseObject* object, const char* const propertyName , Property::Value* value );
+  using SetPropertyFunction = void (*)(BaseObject *, const char *const, Property::Value *);
 
 
   /**
@@ -55,7 +55,7 @@ namespace CSharpTypeInfo
    * @return The current value of the property for the object specified.
    * @see PropertyRegistration.
    */
-  typedef Property::Value* (*GetPropertyFunction)( BaseObject* object, const char* const propertyName );
+  using GetPropertyFunction = Property::Value *(*)(BaseObject *, const char *const);
 }
 
 

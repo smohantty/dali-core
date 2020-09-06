@@ -43,9 +43,9 @@ class OwnerContainer : public Dali::Vector< T >
 {
 public:
 
-  typedef typename Dali::Vector< T >::SizeType SizeType;
-  typedef typename Vector< T >::Iterator Iterator;
-  typedef typename Vector< T >::ConstIterator ConstIterator;
+  using SizeType = typename Dali::Vector<T>::SizeType;
+  using Iterator = typename Vector<T>::Iterator;
+  using ConstIterator = typename Vector<T>::ConstIterator;
 
   /**
    * Create a pointer-container.

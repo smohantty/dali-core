@@ -30,8 +30,8 @@ namespace Render
 struct Sampler
 {
 
-  typedef Dali::FilterMode::Type FilterMode;
-  typedef Dali::WrapMode::Type   WrapMode;
+  using FilterMode = Dali::FilterMode::Type;
+  using WrapMode = Dali::WrapMode::Type;
 
   /**
    * Constructor

@@ -33,7 +33,7 @@ namespace Dali
  * @{
  */
 
-typedef float (*AlphaFunctionPrototype)(float progress); ///< Prototype of an alpha function @SINCE_1_0.0
+using AlphaFunctionPrototype = float (*)(float); ///< Prototype of an alpha function @SINCE_1_0.0
 
   /**
    * @brief Alpha functions are used in animations to specify the rate of change of the animation parameter over time.

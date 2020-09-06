@@ -30,7 +30,7 @@ namespace Dali
  */
 
 class RelayoutContainer;
-typedef RelayoutContainer* RelayoutContainerPtr;
+using RelayoutContainerPtr = RelayoutContainer *;
 
 
 /**
