@@ -30,13 +30,9 @@ Sampler Sampler::New()
   return Sampler( sampler.Get() );
 }
 
-Sampler::Sampler()
-{
-}
+Sampler::Sampler() = default;
 
-Sampler::~Sampler()
-{
-}
+Sampler::~Sampler() = default;
 
 Sampler::Sampler( const Sampler& handle ) = default;
 

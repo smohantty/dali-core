@@ -30,12 +30,10 @@ namespace SceneGraph
 // Messages for a property owner
 
 PropertyOwnerMessageBase::PropertyOwnerMessageBase()
-{
-}
+= default;
 
 PropertyOwnerMessageBase::~PropertyOwnerMessageBase()
-{
-}
+= default;
 
 } // namespace SceneGraph
 

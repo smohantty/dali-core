@@ -21,12 +21,8 @@
 namespace Dali
 {
 
-ConnectionTrackerInterface::ConnectionTrackerInterface()
-{
-}
+ConnectionTrackerInterface::ConnectionTrackerInterface() = default;
 
-ConnectionTrackerInterface::~ConnectionTrackerInterface()
-{
-}
+ConnectionTrackerInterface::~ConnectionTrackerInterface() = default;
 
 } // namespace Dali

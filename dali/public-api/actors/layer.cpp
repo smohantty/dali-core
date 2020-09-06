@@ -26,9 +26,7 @@ namespace Dali
 
 using Dali::Layer;
 
-Layer::Layer()
-{
-}
+Layer::Layer() = default;
 
 Layer Layer::New()
 {
@@ -42,9 +40,7 @@ Layer Layer::DownCast( BaseHandle handle )
   return Layer( dynamic_cast<Dali::Internal::Layer*>(handle.GetObjectPtr()) );
 }
 
-Layer::~Layer()
-{
-}
+Layer::~Layer() = default;
 
 Layer::Layer(const Layer& copy) = default;
 

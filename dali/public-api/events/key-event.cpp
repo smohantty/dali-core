@@ -33,9 +33,7 @@ KeyEvent::KeyEvent( const KeyEvent& rhs ) = default;
 
 KeyEvent::KeyEvent( KeyEvent&& rhs ) = default;
 
-KeyEvent::~KeyEvent()
-{
-}
+KeyEvent::~KeyEvent() = default;
 
 KeyEvent& KeyEvent::operator=( const KeyEvent& rhs ) = default;
 

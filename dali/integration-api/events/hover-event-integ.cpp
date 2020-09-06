@@ -34,9 +34,7 @@ HoverEvent::HoverEvent( uint32_t time )
 {
 }
 
-HoverEvent::~HoverEvent()
-{
-}
+HoverEvent::~HoverEvent() = default;
 
 } // namespace Integration
 

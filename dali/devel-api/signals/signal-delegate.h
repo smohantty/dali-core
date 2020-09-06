@@ -46,9 +46,7 @@ public:
   /**
    * @brief Destructor.
    */
-  ~SignalDelegate()
-  {
-  }
+  ~SignalDelegate() = default;
 
 public:
 

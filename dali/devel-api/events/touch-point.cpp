@@ -37,8 +37,6 @@ TouchPoint::TouchPoint(int32_t id, PointState::Type state, float screenX, float 
 {
 }
 
-TouchPoint::~TouchPoint()
-{
-}
+TouchPoint::~TouchPoint() = default;
 
 } // namespace Dali

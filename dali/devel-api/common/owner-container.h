@@ -50,8 +50,7 @@ public:
   /**
    * Create a pointer-container.
    */
-  OwnerContainer()
-  { }
+  OwnerContainer() = default;
 
   /**
    * Non-virtual destructor; OwnerContainer<T> is not suitable as base class.

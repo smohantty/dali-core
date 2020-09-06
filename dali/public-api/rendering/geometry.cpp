@@ -30,13 +30,9 @@ Geometry Geometry::New()
   return Geometry( geometry.Get() );
 }
 
-Geometry::Geometry()
-{
-}
+Geometry::Geometry() = default;
 
-Geometry::~Geometry()
-{
-}
+Geometry::~Geometry() = default;
 
 Geometry::Geometry( const Geometry& handle ) = default;
 

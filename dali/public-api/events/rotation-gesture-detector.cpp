@@ -29,9 +29,7 @@ RotationGestureDetector::RotationGestureDetector( Internal::RotationGestureDetec
 {
 }
 
-RotationGestureDetector::RotationGestureDetector()
-{
-}
+RotationGestureDetector::RotationGestureDetector() = default;
 
 RotationGestureDetector RotationGestureDetector::New()
 {
@@ -45,14 +43,9 @@ RotationGestureDetector RotationGestureDetector::DownCast( BaseHandle handle )
   return RotationGestureDetector( dynamic_cast<Dali::Internal::RotationGestureDetector*>( handle.GetObjectPtr() ) );
 }
 
-RotationGestureDetector::~RotationGestureDetector()
-{
-}
+RotationGestureDetector::~RotationGestureDetector() = default;
 
-RotationGestureDetector::RotationGestureDetector( const RotationGestureDetector& handle )
-: GestureDetector( handle )
-{
-}
+RotationGestureDetector::RotationGestureDetector( const RotationGestureDetector& handle ) = default;
 
 RotationGestureDetector& RotationGestureDetector::operator=( const RotationGestureDetector& rhs )
 {

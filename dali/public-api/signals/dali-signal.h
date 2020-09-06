@@ -150,17 +150,13 @@ public:
    * @brief Default constructor.
    * @SINCE_1_0.0
    */
-  Signal()
-  {
-  }
+  Signal() = default;
 
   /**
    * @brief Non-virtual destructor.
    * @SINCE_1_0.0
    */
-  ~Signal()
-  {
-  }
+  ~Signal() = default;
 
   /**
    * @brief Queries whether there are any connected slots.
@@ -318,17 +314,13 @@ public:
    * @brief Default constructor.
    * @SINCE_1_0.0
    */
-  Signal()
-  {
-  }
+  Signal() = default;
 
   /**
    * @brief Non-virtual destructor.
    * @SINCE_1_0.0
    */
-  ~Signal()
-  {
-  }
+  ~Signal() = default;
 
   /**
    * @brief Queries whether there are any connected slots.
@@ -487,17 +479,13 @@ public:
    * @brief Default constructor.
    * @SINCE_1_0.0
    */
-  Signal()
-  {
-  }
+  Signal() = default;
 
   /**
    * @brief Non-virtual destructor.
    * @SINCE_1_0.0
    */
-  ~Signal()
-  {
-  }
+  ~Signal() = default;
 
   /**
    * @brief Queries whether there are any connected slots.
@@ -656,17 +644,13 @@ public:
    * @brief Default constructor.
    * @SINCE_1_0.0
    */
-  Signal()
-  {
-  }
+  Signal() = default;
 
   /**
    * @brief Non-virtual destructor.
    * @SINCE_1_0.0
    */
-  ~Signal()
-  {
-  }
+  ~Signal() = default;
 
   /**
    * @brief Queries whether there are any connected slots.
@@ -828,18 +812,14 @@ public:
    *
    * @SINCE_1_0.0
    */
-  Signal()
-  {
-  }
+  Signal() = default;
 
   /**
    * @brief Non-virtual destructor.
    *
    * @SINCE_1_0.0
    */
-  ~Signal()
-  {
-  }
+  ~Signal() = default;
 
   /**
    * @brief Queries whether there are any connected slots.
@@ -999,17 +979,13 @@ public:
    * @brief Default constructor.
    * @SINCE_1_0.0
    */
-  Signal()
-  {
-  }
+  Signal() = default;
 
   /**
    * @brief Non-virtual destructor.
    * @SINCE_1_0.0
    */
-  ~Signal()
-  {
-  }
+  ~Signal() = default;
 
   /**
    * @brief Queries whether there are any connected slots.
@@ -1169,17 +1145,13 @@ public:
    * @brief Default constructor.
    * @SINCE_1_0.0
    */
-  Signal()
-  {
-  }
+  Signal() = default;
 
   /**
    * @brief Non-virtual destructor.
    * @SINCE_1_0.0
    */
-  ~Signal()
-  {
-  }
+  ~Signal() = default;
 
   /**
    * @brief Queries whether there are any connected slots.
@@ -1340,17 +1312,13 @@ public:
    * @brief Default constructor.
    * @SINCE_1_0.0
    */
-  Signal()
-  {
-  }
+  Signal() = default;
 
   /**
    * @brief Non-virtual destructor.
    * @SINCE_1_0.0
    */
-  ~Signal()
-  {
-  }
+  ~Signal() = default;
 
   /**
    * @brief Queries whether there are any connected slots.

@@ -23,13 +23,9 @@ namespace Internal
 namespace SceneGraph
 {
 
-ConnectionChangePropagator::ConnectionChangePropagator()
-{
-}
+ConnectionChangePropagator::ConnectionChangePropagator() = default;
 
-ConnectionChangePropagator::~ConnectionChangePropagator()
-{
-}
+ConnectionChangePropagator::~ConnectionChangePropagator() = default;
 
 void ConnectionChangePropagator::Add(Observer& observer)
 {

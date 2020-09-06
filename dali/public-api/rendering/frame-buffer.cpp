@@ -57,13 +57,9 @@ FrameBuffer FrameBuffer::New( uint32_t width, uint32_t height, Attachment::Mask 
   return FrameBuffer( frameBuffer.Get() );
 }
 
-FrameBuffer::FrameBuffer()
-{
-}
+FrameBuffer::FrameBuffer() = default;
 
-FrameBuffer::~FrameBuffer()
-{
-}
+FrameBuffer::~FrameBuffer() = default;
 
 FrameBuffer::FrameBuffer( const FrameBuffer& handle ) = default;
 

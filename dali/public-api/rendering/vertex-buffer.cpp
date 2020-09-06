@@ -32,13 +32,9 @@ VertexBuffer VertexBuffer::New( Dali::Property::Map& bufferFormat )
   return VertexBuffer( vertexBuffer.Get() );
 }
 
-VertexBuffer::VertexBuffer()
-{
-}
+VertexBuffer::VertexBuffer() = default;
 
-VertexBuffer::~VertexBuffer()
-{
-}
+VertexBuffer::~VertexBuffer() = default;
 
 VertexBuffer::VertexBuffer( const VertexBuffer& handle ) = default;
 

@@ -21,8 +21,6 @@
 namespace Dali
 {
 
-PropertyInput::~PropertyInput()
-{
-}
+PropertyInput::~PropertyInput() = default;
 
 } // namespace Dali

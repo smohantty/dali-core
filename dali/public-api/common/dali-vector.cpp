@@ -29,9 +29,7 @@ VectorBase::VectorBase()
 {
 }
 
-VectorBase::~VectorBase()
-{
-}
+VectorBase::~VectorBase() = default;
 
 VectorBase::SizeType VectorBase::Capacity() const
 {

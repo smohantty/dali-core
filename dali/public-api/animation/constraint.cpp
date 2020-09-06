@@ -40,18 +40,14 @@ Internal::PropertyConstraint< P >* CreatePropertyConstraint( CallbackBase* func 
 
 const Constraint::RemoveAction Constraint::DEFAULT_REMOVE_ACTION = Constraint::BAKE;
 
-Constraint::Constraint()
-{
-}
+Constraint::Constraint() = default;
 
 Constraint Constraint::Clone( Handle object )
 {
   return Constraint( GetImplementation( *this ).Clone( GetImplementation( object ) ) );
 }
 
-Constraint::~Constraint()
-{
-}
+Constraint::~Constraint() = default;
 
 Constraint::Constraint( const Constraint& constraint ) = default;
 

@@ -24,13 +24,9 @@
 namespace Dali
 {
 
-ObjectRegistry::ObjectRegistry()
-{
-}
+ObjectRegistry::ObjectRegistry() = default;
 
-ObjectRegistry::~ObjectRegistry()
-{
-}
+ObjectRegistry::~ObjectRegistry() = default;
 
 ObjectRegistry::ObjectRegistry(const ObjectRegistry& copy) = default;
 

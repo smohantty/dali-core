@@ -61,9 +61,7 @@ KeyEvent::KeyEvent( const std::string& keyName, const std::string& logicalKey, c
 {
 }
 
-KeyEvent::~KeyEvent()
-{
-}
+KeyEvent::~KeyEvent() = default;
 
 } // namespace Integration
 

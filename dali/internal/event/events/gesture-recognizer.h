@@ -44,7 +44,7 @@ class RecognizerObserver
 public:
   virtual void Process( Scene& scene, const T& event ) = 0;
 
-  virtual ~RecognizerObserver(){};
+  virtual ~RecognizerObserver()= default;;
 };
 
 
@@ -116,7 +116,7 @@ protected:
   /**
    * Virtual destructor.
    */
-  ~GestureRecognizer() override {}
+  ~GestureRecognizer() override = default;
 
 protected:
   Vector2 mScreenSize;

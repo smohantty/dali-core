@@ -24,9 +24,7 @@ namespace Dali
 namespace Internal
 {
 
-GestureEvent::~GestureEvent()
-{
-}
+GestureEvent::~GestureEvent() = default;
 
 GestureEvent::GestureEvent( GestureType::Value gesture, GestureState gestureState )
 : gestureType( gesture ),

@@ -37,9 +37,7 @@ PanGestureDetector::PanGestureDetector(Internal::PanGestureDetector* internal)
 {
 }
 
-PanGestureDetector::PanGestureDetector()
-{
-}
+PanGestureDetector::PanGestureDetector() = default;
 
 PanGestureDetector PanGestureDetector::New()
 {
@@ -53,14 +51,9 @@ PanGestureDetector PanGestureDetector::DownCast( BaseHandle handle )
   return PanGestureDetector( dynamic_cast<Dali::Internal::PanGestureDetector*>(handle.GetObjectPtr()) );
 }
 
-PanGestureDetector::~PanGestureDetector()
-{
-}
+PanGestureDetector::~PanGestureDetector() = default;
 
-PanGestureDetector::PanGestureDetector(const PanGestureDetector& handle)
-: GestureDetector(handle)
-{
-}
+PanGestureDetector::PanGestureDetector(const PanGestureDetector& handle) = default;
 
 PanGestureDetector& PanGestureDetector::operator=(const PanGestureDetector& rhs)
 {

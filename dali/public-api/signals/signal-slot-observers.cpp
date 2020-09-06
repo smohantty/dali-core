@@ -21,20 +21,12 @@
 namespace Dali
 {
 
-SignalObserver::SignalObserver()
-{
-}
+SignalObserver::SignalObserver() = default;
 
-SignalObserver::~SignalObserver()
-{
-}
+SignalObserver::~SignalObserver() = default;
 
-SlotObserver::SlotObserver()
-{
-}
+SlotObserver::SlotObserver() = default;
 
-SlotObserver::~SlotObserver()
-{
-}
+SlotObserver::~SlotObserver() = default;
 
 } // namespace Dali

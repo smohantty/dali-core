@@ -44,7 +44,7 @@ protected:
   /**
    * Virtual protected destructor
    */
-  virtual ~Processor() { }
+  virtual ~Processor() = default;
 };
 
 } // Dali

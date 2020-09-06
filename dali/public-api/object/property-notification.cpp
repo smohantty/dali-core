@@ -30,9 +30,7 @@
 namespace Dali
 {
 
-PropertyNotification::PropertyNotification()
-{
-}
+PropertyNotification::PropertyNotification() = default;
 
 PropertyNotification::PropertyNotification(Internal::PropertyNotification* propertyNotification)
 : BaseHandle(propertyNotification)
@@ -44,9 +42,7 @@ PropertyNotification PropertyNotification::DownCast( BaseHandle handle )
   return PropertyNotification( dynamic_cast<Dali::Internal::PropertyNotification*>(handle.GetObjectPtr()) );
 }
 
-PropertyNotification::~PropertyNotification()
-{
-}
+PropertyNotification::~PropertyNotification() = default;
 
 PropertyNotification::PropertyNotification(const PropertyNotification& copy) = default;
 

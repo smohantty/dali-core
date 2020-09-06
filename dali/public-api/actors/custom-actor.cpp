@@ -40,18 +40,14 @@ TypeRegistration mType( typeid(Dali::CustomActor), typeid(Dali::Actor), Create )
 
 }
 
-CustomActor::CustomActor()
-{
-}
+CustomActor::CustomActor() = default;
 
 CustomActor CustomActor::DownCast( BaseHandle handle )
 {
   return CustomActor( dynamic_cast<Dali::Internal::CustomActor*>(handle.GetObjectPtr()) );
 }
 
-CustomActor::~CustomActor()
-{
-}
+CustomActor::~CustomActor() = default;
 
 CustomActor::CustomActor(const CustomActor& copy) = default;
 

@@ -34,13 +34,9 @@ BaseHandle::BaseHandle(Dali::BaseObject* handle)
 {
 }
 
-BaseHandle::BaseHandle()
-{
-}
+BaseHandle::BaseHandle() = default;
 
-BaseHandle::~BaseHandle()
-{
-}
+BaseHandle::~BaseHandle() = default;
 
 BaseHandle::BaseHandle(const BaseHandle& handle) = default;
 

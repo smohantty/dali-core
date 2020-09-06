@@ -46,9 +46,7 @@ WheelEvent::WheelEvent( Type type, int direction, unsigned int modifiers, Vector
 {
 }
 
-WheelEvent::~WheelEvent()
-{
-}
+WheelEvent::~WheelEvent() = default;
 
 } // namespace Integration
 

@@ -34,9 +34,7 @@
 namespace Dali
 {
 
-Actor::Actor()
-{
-}
+Actor::Actor() = default;
 
 Actor Actor::New()
 {
@@ -50,9 +48,7 @@ Actor Actor::DownCast( BaseHandle handle )
   return Actor( dynamic_cast<Dali::Internal::Actor*>(handle.GetObjectPtr()) );
 }
 
-Actor::~Actor()
-{
-}
+Actor::~Actor() = default;
 
 Actor::Actor(const Actor& copy) = default;
 

@@ -273,7 +273,7 @@ public:
     /**
      * Virtual destructor, no deletion through this interface
      */
-    virtual ~PackedPixelsProfile() {}
+    virtual ~PackedPixelsProfile() = default;
   };
 
   /**
@@ -316,7 +316,7 @@ public:
     /**
      * Virtual destructor, no deletion through this interface
      */
-    virtual ~CompressedProfile() {}
+    virtual ~CompressedProfile() = default;
   };
 
   virtual const CompressedProfile* GetCompressedProfile() const { return nullptr; }

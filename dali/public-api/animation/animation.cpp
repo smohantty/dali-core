@@ -28,9 +28,7 @@
 namespace Dali
 {
 
-Animation::Animation()
-{
-}
+Animation::Animation() = default;
 
 Animation::Animation(Internal::Animation* animation)
 : BaseHandle(animation)
@@ -49,9 +47,7 @@ Animation Animation::DownCast( BaseHandle handle )
   return Animation( dynamic_cast<Dali::Internal::Animation*>(handle.GetObjectPtr()) );
 }
 
-Animation::~Animation()
-{
-}
+Animation::~Animation() = default;
 
 Animation::Animation(const Animation& handle) = default;
 

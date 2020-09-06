@@ -80,7 +80,7 @@ public:
     /**
      * Virtual destructor, no deletion through this interface
      */
-    virtual ~Observer() {}
+    virtual ~Observer() = default;
 
   };
 

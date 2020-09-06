@@ -117,7 +117,7 @@ class KeyFrameSpec : public RefObject
 {
 public:
 
-  KeyFrameSpec() {}
+  KeyFrameSpec() = default;
 
   virtual std::size_t GetNumberOfKeyFrames() const = 0;
 
@@ -133,7 +133,7 @@ protected:
   /**
    * A reference counted object may only be deleted by calling Unreference()
    */
-  ~KeyFrameSpec() override {}
+  ~KeyFrameSpec() override = default;
 };
 
 

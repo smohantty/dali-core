@@ -165,9 +165,7 @@ protected:
    * The implementation should destroy the NativeImage resources.
    * @SINCE_1_0.0
    */
-  ~NativeImageInterface() override
-  {
-  }
+  ~NativeImageInterface() override = default;
 
 };
 

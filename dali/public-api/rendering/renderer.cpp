@@ -32,13 +32,9 @@ Renderer Renderer::New( Geometry& geometry, Shader& shader )
   return Renderer( renderer.Get() );
 }
 
-Renderer::Renderer()
-{
-}
+Renderer::Renderer() = default;
 
-Renderer::~Renderer()
-{
-}
+Renderer::~Renderer() = default;
 
 Renderer::Renderer( const Renderer& handle ) = default;
 
