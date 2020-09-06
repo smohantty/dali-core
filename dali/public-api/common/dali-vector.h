@@ -81,7 +81,7 @@ protected: // Construction
    * a vtable for this class as it would unnecessarily increase size.
    * @SINCE_1_0.0
    */
-  ~VectorBase();
+  ~VectorBase() = default;
 
 public: // API
 

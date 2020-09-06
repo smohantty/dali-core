@@ -49,7 +49,7 @@ public:
   /**
    * Non-virtual destructor; not intended as a base class.
    */
-  ~SceneGraphBuffers();
+  ~SceneGraphBuffers() = default;
 
   /**
    * Retrieve the current event-buffer index.

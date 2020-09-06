@@ -53,7 +53,7 @@ public:
   /**
    * Non-virtual destructor; WheelEventProcessor is not a base class
    */
-  ~WheelEventProcessor();
+  ~WheelEventProcessor() = default;
 
   /**
    * This function is called by the event processor whenever a nouse wheel event occurs.

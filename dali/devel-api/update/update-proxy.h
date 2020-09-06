@@ -173,7 +173,7 @@ public: // Not intended for application developers
   /**
    * @brief Destructor.
    */
-  DALI_INTERNAL ~UpdateProxy();
+  DALI_INTERNAL ~UpdateProxy() = default;
 
   // Not copyable or movable
 

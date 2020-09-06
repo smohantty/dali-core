@@ -55,7 +55,7 @@ struct DALI_CORE_API TimePeriod
    * @brief Non-virtual destructor. TimePeriod is not intended as a base class.
    * @SINCE_1_0.0
    */
-  ~TimePeriod();
+  ~TimePeriod() = default;
 
   float delaySeconds;    ///< A delay before the time period in seconds
   float durationSeconds; ///< The duration of the time period in seconds

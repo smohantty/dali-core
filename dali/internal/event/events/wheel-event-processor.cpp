@@ -128,7 +128,7 @@ WheelEventProcessor::WheelEventProcessor( Scene& scene )
 {
 }
 
-WheelEventProcessor::~WheelEventProcessor() = default;
+
 
 void WheelEventProcessor::ProcessWheelEvent( const Integration::WheelEvent& event )
 {

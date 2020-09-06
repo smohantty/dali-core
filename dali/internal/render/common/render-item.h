@@ -52,7 +52,7 @@ struct RenderItem
   /**
    * Non-virtual destructor; RenderItem is not suitable as a base class.
    */
-  ~RenderItem();
+  ~RenderItem() = default;
 
   /**
    * @brief This method is an optimized calculation of a viewport-space AABB (Axis-Aligned-Bounding-Box).

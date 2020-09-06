@@ -123,7 +123,7 @@ public:
    *
    * @SINCE_1_0.0
    */
-  ~Quaternion();
+  ~Quaternion() = default;
 
 // Constants
 

@@ -94,6 +94,6 @@ UpdateProxy::UpdateProxy( Internal::UpdateProxy& impl )
 {
 }
 
-UpdateProxy::~UpdateProxy() = default;
+
 
 } // namespace Dali

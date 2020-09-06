@@ -54,7 +54,7 @@ public:
   /**
    * Non-virtual destructor; KeyEventProcessor is not a base class
    */
-  ~KeyEventProcessor();
+  ~KeyEventProcessor() = default;
 
   /**
    * This function is called by the event processor whenever a key event occurs.

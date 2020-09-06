@@ -158,7 +158,7 @@ struct DALI_CORE_API Property
    * @brief Non-virtual destructor; Property is not intended as a base class.
    * @SINCE_1_0.0
    */
-  ~Property();
+  ~Property() = default;
 
   Handle& object; ///< A valid handle to the target object.
 

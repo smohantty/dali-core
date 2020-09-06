@@ -60,7 +60,7 @@ public:
    * @brief Non-virtual destructor, not intended as a base class.
    * @SINCE_1_0.0
    */
-  ~SlotConnection();
+  ~SlotConnection() = default;
 
   /**
    * @brief Retrieves the callback.

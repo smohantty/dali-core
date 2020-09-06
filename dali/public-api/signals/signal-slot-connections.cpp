@@ -33,7 +33,7 @@ SlotConnection::SlotConnection( SlotObserver* slotObserver, CallbackBase* callba
 {
 }
 
-SlotConnection::~SlotConnection() = default;
+
 
 CallbackBase* SlotConnection::GetCallback()
 {

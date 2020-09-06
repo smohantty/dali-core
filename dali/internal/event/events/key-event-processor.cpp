@@ -35,7 +35,7 @@ KeyEventProcessor::KeyEventProcessor( Scene& scene )
 {
 }
 
-KeyEventProcessor::~KeyEventProcessor() = default;
+
 
 void KeyEventProcessor::ProcessKeyEvent( const Integration::KeyEvent& event )
 {
